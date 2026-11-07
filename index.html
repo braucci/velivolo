@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assi, moti e organi di controllo — prof. Biagio Raucci</title>
+<meta name="description" content="Modello 3D interattivo: assi corpo, moti di rollio/beccheggio/imbardata, organi di controllo e tipi di stabilità del velivolo. Costruzioni Aeronautiche, classe III — prof. Biagio Raucci.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%20%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22lgBg%22%20cx%3D%2250%25%22%20cy%3D%2238%25%22%20r%3D%2265%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2316314f%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23060b16%22/%3E%0A%20%20%20%20%3C/radialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lgAc%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffffff%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%239fdcf0%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lgRing%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%238ff1ff%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231e7fa0%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22url%28%23lgBg%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22none%22%20stroke%3D%22url%28%23lgRing%29%22%20stroke-width%3D%222%22/%3E%0A%20%20%3C%21--%20bezel%3A%20tacche%20come%20un%20indicatore%20d%27assetto%20--%3E%0A%20%20%3Cg%20stroke%3D%22%237fb8cc%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.75%22%3E%0A%20%20%20%20%3Cline%20x1%3D%2250%22%20y1%3D%227%22%20x2%3D%2250%22%20y2%3D%2212%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2288%22%20x2%3D%2250%22%20y2%3D%2293%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%227%22%20y1%3D%2250%22%20x2%3D%2212%22%20y2%3D%2250%22/%3E%3Cline%20x1%3D%2288%22%20y1%3D%2250%22%20x2%3D%2293%22%20y2%3D%2250%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20tre%20archi%3A%20rollio%20%28arancio%29%2C%20beccheggio%20%28ciano%29%2C%20imbardata%20%28ambra%29%20--%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke-width%3D%223.4%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M24.4%2021.2%20A39%2039%200%200%201%2041.6%2012.0%22%20stroke%3D%22%23ff8a3d%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M86.2%2035.6%20A39%2039%200%200%201%2086.2%2064.4%22%20stroke%3D%22%2338d9f5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M41.6%2088.0%20A39%2039%200%200%201%2024.4%2078.8%22%20stroke%3D%22%23ffc53d%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20velivolo%20in%20pianta%2C%20ala%20a%20freccia%20--%3E%0A%20%20%3Cpath%20fill%3D%22url%28%23lgAc%29%22%20d%3D%22M50%2017%20C52.2%2019%2053.2%2023%2053.2%2029%20L53.2%2043.5%20L81%2058.5%20L81%2063%20L53.2%2056.5%20L53.2%2070.5%20L62.5%2077.5%20L62.5%2081%20L51.6%2078.6%20L50%2083%20L48.4%2078.6%20L37.5%2081%20L37.5%2077.5%20L46.8%2070.5%20L46.8%2056.5%20L19%2063%20L19%2058.5%20L46.8%2043.5%20L46.8%2029%20C46.8%2023%2047.8%2019%2050%2017%20Z%22/%3E%0A%20%20%3Cpath%20fill%3D%22%231d6fb8%22%20d%3D%22M50%2017%20C51%2018.2%2051.6%2020.4%2051.7%2023%20L48.3%2023%20C48.4%2020.4%2049%2018.2%2050%2017%20Z%22%20opacity%3D%22.9%22/%3E%0A%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg0:#060a14; --panel:rgba(9,14,26,.74); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.18);
+    --txt:#e8eef7; --mut:#93a6bb; --dim:#5f7389;
+    --cyan:#38d9f5; --orange:#ff8a3d; --amber:#ffc53d; --red:#ff5a6a;
+    --roll:#ff8a3d; --pitch:#38d9f5; --yaw:#ffc53d;
+    --f-ui:'Space Grotesk',system-ui,sans-serif; --f-hud:'Orbitron',sans-serif; --f-mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box} html,body{height:100%;margin:0}
+  body{font-family:var(--f-ui);color:var(--txt);background:var(--bg0);overflow:hidden;-webkit-font-smoothing:antialiased}
+  #app{position:fixed;inset:0;display:grid;grid-template-columns:1fr 400px}
+  #stage{position:relative;overflow:hidden}
+  #gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+  #vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(3,6,12,.55) 100%)}
+  #leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  #labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+
+  .lbl{position:absolute;left:0;top:0;white-space:nowrap;font-size:12.5px;line-height:1.15;padding:6px 10px;border-radius:8px;
+      background:rgba(6,10,20,.66);border:1px solid var(--line2);backdrop-filter:blur(8px);pointer-events:auto;cursor:pointer;
+      transition:opacity .35s,border-color .2s,box-shadow .2s,background .2s;will-change:transform;opacity:0}
+  .lbl.in{opacity:.92}
+  .lbl b{display:block;font-weight:600;letter-spacing:.01em}
+  .lbl span{display:block;color:var(--mut);font-size:11px;font-style:italic;margin-top:1px}
+  .lbl.dim{opacity:.3} .lbl.hidden{display:none}
+  .lbl:hover,.lbl.hover{border-color:#fff;background:rgba(10,16,30,.9);opacity:1}
+  .lbl.active{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 0 22px -4px var(--acc);opacity:1}
+  .lbl.active b{color:var(--acc)}
+  .lbl.axis{font-family:var(--f-mono);font-size:11px;border-color:rgba(147,166,187,.35);cursor:default;transform-origin:50% 100%}
+  .lbl.axis b{font-family:var(--f-hud);font-size:12.5px;letter-spacing:.06em}
+  .lbl.sym{font-family:var(--f-hud);font-size:20px;font-weight:700;padding:4px 10px;color:var(--acc);border-color:var(--acc);cursor:default;background:rgba(6,10,20,.8)}
+  #leaders line{stroke:rgba(200,215,235,.55);stroke-width:1;transition:stroke .2s}
+  #leaders line.active{stroke:var(--acc);stroke-width:1.4}
+  #leaders circle{fill:rgba(220,230,245,.9)} #leaders circle.active{fill:var(--acc)}
+
+  /* ---------- HUD ---------- */
+  #hud{position:absolute;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none;gap:12px;flex-wrap:wrap}
+  .hudbox{display:flex;gap:14px;padding:10px 14px;border-radius:12px;background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(12px)}
+  .ro{min-width:92px}
+  .ro .k{font-family:var(--f-mono);font-size:10.5px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+  .ro .v{font-family:var(--f-hud);font-size:20px;font-weight:700;letter-spacing:.03em;margin-top:2px;font-variant-numeric:tabular-nums}
+  .ro .v small{font-family:var(--f-mono);font-size:11px;color:var(--mut);font-weight:400;margin-left:2px}
+  .ro.roll .v{color:var(--roll)} .ro.pitch .v{color:var(--pitch)} .ro.yaw .v{color:var(--yaw)}
+  .ro.d .v{font-size:16px;color:var(--txt)}
+  #topbar{position:absolute;left:18px;top:16px;display:flex;gap:10px;align-items:center;pointer-events:none}
+  .chip{pointer-events:auto;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.04em;padding:7px 11px;border-radius:999px;
+      background:var(--panel);border:1px solid var(--line);color:var(--mut);cursor:pointer;backdrop-filter:blur(8px);user-select:none;transition:.15s}
+  .chip:hover{color:var(--txt);border-color:var(--line2)} .chip.on{color:var(--cyan);border-color:rgba(56,217,245,.45)}
+  #hint{position:absolute;left:50%;bottom:92px;transform:translateX(-50%);font-size:12px;color:var(--mut);pointer-events:none;
+      background:var(--panel);border:1px solid var(--line);padding:6px 12px;border-radius:999px;backdrop-filter:blur(8px);white-space:nowrap;transition:opacity 1s}
+  #hint.gone{opacity:0}
+  #sig{position:absolute;right:18px;top:16px;pointer-events:none;text-align:right}
+  #sig .n{font-family:var(--f-hud);font-size:13px;font-weight:700;letter-spacing:.12em;color:#fff;text-shadow:0 0 18px rgba(56,217,245,.6)}
+  #sig .s{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;color:var(--cyan);margin-top:2px}
+
+  /* ---------- Panel ---------- */
+  #panel{background:var(--panel);border-left:1px solid var(--line);backdrop-filter:blur(16px);display:flex;flex-direction:column;min-height:0}
+  #ph{padding:18px 20px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(56,217,245,.06),transparent)}
+  #ph .eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}
+  #ph h1{font-family:var(--f-hud);font-size:17px;font-weight:700;letter-spacing:.06em;margin:6px 0 4px;line-height:1.25}
+  #ph .sub{font-size:12.5px;color:var(--mut)}
+  #author{margin-top:12px;display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;border:1px solid rgba(56,217,245,.35);
+      background:linear-gradient(135deg,rgba(56,217,245,.14),rgba(56,217,245,.03))}
+  #author .logo{width:54px;height:54px;flex:0 0 54px;filter:drop-shadow(0 0 10px rgba(56,217,245,.35))}
+  #author .logo svg{display:block;width:100%;height:100%}
+  #author .who{font-family:var(--f-hud);font-size:14px;font-weight:700;letter-spacing:.08em;color:#fff}
+  #author .role{font-size:11.5px;color:var(--mut);margin-top:2px;line-height:1.35}
+  #pb{flex:1;overflow:auto;padding:16px 20px 24px;scrollbar-width:thin;scrollbar-color:var(--dim) transparent}
+  h2{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;color:var(--mut);text-transform:uppercase;margin:18px 0 8px}
+  h2:first-child{margin-top:0}
+  .cards{display:grid;gap:8px}
+  .card{display:grid;grid-template-columns:auto 1fr;gap:10px 12px;align-items:center;padding:10px 12px;border-radius:11px;border:1px solid var(--line);
+      background:rgba(255,255,255,.025);cursor:pointer;transition:.15s;position:relative}
+  .card:hover{border-color:var(--line2);background:rgba(255,255,255,.045)}
+  .card.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 9%,transparent);box-shadow:0 0 0 1px var(--acc) inset}
+  .card .sym{font-family:var(--f-hud);font-size:22px;font-weight:700;color:var(--acc);width:36px;text-align:center}
+  .card .n{font-weight:600;font-size:14px} .card .n i{font-weight:400;color:var(--mut);font-style:italic;font-size:12.5px}
+  .card .m{font-family:var(--f-mono);font-size:11px;color:var(--mut);margin-top:3px;line-height:1.5}
+  .card .m b{color:var(--txt);font-weight:600} .card .m em{color:var(--acc);font-style:normal}
+  #ctl{margin-top:8px;padding:12px;border-radius:11px;border:1px solid var(--line);background:rgba(0,0,0,.22)}
+  #ctl .lab{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:var(--mut);margin-bottom:6px}
+  #ctl .lab span{max-width:48%} #ctl .lab span:last-child{text-align:right}
+  input[type=range]{width:100%;appearance:none;height:4px;border-radius:2px;background:var(--acc);outline:0;margin:6px 0 10px}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--acc);box-shadow:0 0 0 4px rgba(0,0,0,.35);cursor:grab}
+  input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--acc);cursor:grab}
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.04em;padding:8px 12px;border-radius:8px;border:1px solid var(--line2);background:rgba(255,255,255,.04);color:var(--txt);cursor:pointer;transition:.15s}
+  .btn:hover{background:rgba(255,255,255,.09)} .btn.acc{border-color:var(--acc);color:var(--acc)} .btn.on{background:color-mix(in srgb,var(--acc) 18%,transparent);border-color:var(--acc);color:var(--acc)}
+  #ctlmode{display:flex;gap:4px;margin-bottom:10px;background:rgba(0,0,0,.3);padding:4px;border-radius:10px;border:1px solid var(--line)}
+  #ctlmode button{flex:1;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:8px 6px;border:0;border-radius:7px;background:transparent;color:var(--mut);cursor:pointer;transition:.15s}
+  #ctlmode button.on{background:rgba(56,217,245,.14);color:var(--cyan);box-shadow:inset 0 0 0 1px rgba(56,217,245,.4)}
+  #gest{display:none;margin-top:10px;font-size:12.5px;line-height:1.55;color:var(--mut)}
+  #gest b{color:var(--txt)} #gest .st{font-family:var(--f-mono);font-size:11px;margin-top:6px;color:var(--cyan)}
+  #cam{position:absolute;left:18px;top:60px;width:232px;border-radius:12px;overflow:hidden;border:1px solid rgba(56,217,245,.4);background:#000;display:none;box-shadow:0 10px 30px -10px rgba(0,0,0,.8)}
+  #cam video,#cam canvas{position:absolute;inset:0;width:100%;height:100%;transform:scaleX(-1);object-fit:cover}
+  #cam .ph{position:relative;padding-top:56.25%}
+  #cam .tag{position:absolute;left:8px;top:6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--cyan);text-shadow:0 0 6px #000}
+  #cam .msg{position:absolute;left:0;right:0;bottom:0;padding:5px 8px;font-family:var(--f-mono);font-size:10.5px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+  #cam.hand{border-color:var(--cyan)} #cam.fist{border-color:var(--amber)}
+  .btn.small{padding:6px 9px;font-size:10.5px}
+  #sent{font-size:13px;line-height:1.5;margin-top:10px;padding:10px 12px;border-left:3px solid var(--acc);background:rgba(255,255,255,.03);border-radius:0 8px 8px 0;min-height:52px}
+  #sent b{color:var(--acc)}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);text-align:left;padding:6px 8px;border-bottom:1px solid var(--line2)}
+  td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.35}
+  td i{display:block;color:var(--mut);font-size:11px;font-style:italic}
+  tr.on td{background:color-mix(in srgb,var(--acc) 10%,transparent)} tr.on td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
+  tbody tr{cursor:pointer} tbody tr:hover td{background:rgba(255,255,255,.04)}
+  .warn{margin-top:14px;padding:12px 14px;border-radius:10px;background:rgba(255,90,106,.08);border:1px solid rgba(255,90,106,.3);font-size:13px;line-height:1.5}
+  .warn b{display:block;color:var(--red);margin-bottom:4px}
+  .info{margin-top:10px;padding:10px 12px;border-radius:10px;background:rgba(56,217,245,.06);border:1px solid rgba(56,217,245,.25);font-size:12.5px;line-height:1.5}
+  .info b{color:var(--cyan)} .info i{color:var(--mut)}
+  .keys{margin-top:14px;font-family:var(--f-mono);font-size:11px;color:var(--dim);line-height:1.7}
+  kbd{display:inline-block;padding:0 5px;border:1px solid var(--line2);border-bottom-width:2px;border-radius:4px;font-size:10.5px;color:var(--mut);margin:0 1px}
+  #foot{padding:12px 20px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:10.5px;color:var(--mut);letter-spacing:.06em;line-height:1.6}
+  #foot b{color:#fff;font-family:var(--f-hud);letter-spacing:.1em;font-size:11px}
+
+  @media (max-width:900px){
+    #app{grid-template-columns:1fr;grid-template-rows:1fr auto}
+    #panel{border-left:0;border-top:1px solid var(--line);max-height:50vh}
+    #ph{padding:12px 16px 10px} #ph h1{font-size:14px} #pb{padding:12px 16px 18px}
+    #hud{bottom:10px;left:10px;right:10px} .hudbox{padding:8px 10px;gap:10px} .ro{min-width:70px} .ro .v{font-size:16px}
+    #hint,#sig{display:none} .lbl{font-size:11px;padding:4px 7px}
+  }
+  #nogl{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:40px;color:var(--mut);font-size:14px;line-height:1.6}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <canvas id="gl"></canvas>
+    <div id="vignette"></div>
+    <svg id="leaders"></svg>
+    <div id="labels"></div>
+    <div id="nogl">Il browser non supporta WebGL 2: il modello 3D non può essere mostrato.<br>Prova con una versione recente di Chrome, Safari, Firefox o Edge.</div>
+    <div id="topbar">
+      <div class="chip on" id="chipLabels">ETICHETTE</div>
+      <div class="chip on" id="chipAxes">ASSI CORPO</div>
+      <div class="chip" id="chipView">VISTA ⟲</div>
+    </div>
+    <div id="cam"><div class="ph"></div><video id="camv" autoplay playsinline muted></video><canvas id="camc"></canvas><div class="tag">WEBCAM · MEDIAPIPE HANDS</div><div class="msg" id="cammsg">Avvio webcam…</div></div>
+    <div id="hint">Trascina per ruotare la vista · rotella per lo zoom · clicca un organo sul modello</div>
+    <div id="sig"><div class="n">PROF. BIAGIO RAUCCI</div><div class="s">SERIE RAUCCI · COSTRUZIONI AERONAUTICHE</div></div>
+    <div id="hud">
+      <div class="hudbox">
+        <div class="ro roll"><div class="k">Φ rollio · roll</div><div class="v" id="roPhi">0.0<small>°</small></div></div>
+        <div class="ro pitch"><div class="k">Θ beccheggio · pitch</div><div class="v" id="roTheta">0.0<small>°</small></div></div>
+        <div class="ro yaw"><div class="k">Ψ imbardata · yaw</div><div class="v" id="roPsi">0.0<small>°</small></div></div>
+      </div>
+      <div class="hudbox">
+        <div class="ro d"><div class="k">δ alett. dx / sx</div><div class="v" id="roA">0 / 0<small>°</small></div></div>
+        <div class="ro d"><div class="k">δ equilibratore</div><div class="v" id="roE">0<small>°</small></div></div>
+        <div class="ro d"><div class="k">δ timone</div><div class="v" id="roR">0<small>°</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <aside id="panel">
+    <div id="ph">
+      <div class="eyebrow">Costruzioni Aeronautiche · Classe III</div>
+      <h1>ASSI · MOTI · ORGANI DI CONTROLLO</h1>
+      <div class="sub">Il velivolo — modello interattivo della terna corpo e dei comandi di volo primari</div>
+      <div id="author"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Serie Raucci">
+  <defs>
+    <radialGradient id="lgBg" cx="50%" cy="38%" r="65%">
+      <stop offset="0" stop-color="#16314f"/><stop offset="1" stop-color="#060b16"/>
+    </radialGradient>
+    <linearGradient id="lgAc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fdcf0"/>
+    </linearGradient>
+    <linearGradient id="lgRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ff1ff"/><stop offset="1" stop-color="#1e7fa0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="47" fill="url(#lgBg)"/>
+  <circle cx="50" cy="50" r="47" fill="none" stroke="url(#lgRing)" stroke-width="2"/>
+  <!-- bezel: tacche come un indicatore d'assetto -->
+  <g stroke="#7fb8cc" stroke-width="1.6" stroke-linecap="round" opacity=".75">
+    <line x1="50" y1="7" x2="50" y2="12"/><line x1="50" y1="88" x2="50" y2="93"/>
+    <line x1="7" y1="50" x2="12" y2="50"/><line x1="88" y1="50" x2="93" y2="50"/>
+  </g>
+  <!-- tre archi: rollio (arancio), beccheggio (ciano), imbardata (ambra) -->
+  <g fill="none" stroke-width="3.4" stroke-linecap="round">
+    <path d="M24.4 21.2 A39 39 0 0 1 41.6 12.0" stroke="#ff8a3d"/>
+    <path d="M86.2 35.6 A39 39 0 0 1 86.2 64.4" stroke="#38d9f5"/>
+    <path d="M41.6 88.0 A39 39 0 0 1 24.4 78.8" stroke="#ffc53d"/>
+  </g>
+  <!-- velivolo in pianta, ala a freccia -->
+  <path fill="url(#lgAc)" d="M50 17 C52.2 19 53.2 23 53.2 29 L53.2 43.5 L81 58.5 L81 63 L53.2 56.5 L53.2 70.5 L62.5 77.5 L62.5 81 L51.6 78.6 L50 83 L48.4 78.6 L37.5 81 L37.5 77.5 L46.8 70.5 L46.8 56.5 L19 63 L19 58.5 L46.8 43.5 L46.8 29 C46.8 23 47.8 19 50 17 Z"/>
+  <path fill="#1d6fb8" d="M50 17 C51 18.2 51.6 20.4 51.7 23 L48.3 23 C48.4 20.4 49 18.2 50 17 Z" opacity=".9"/>
+</svg></div><div><div class="who">prof. BIAGIO RAUCCI</div><div class="role">Ingegnere aerospaziale · docente di Costruzioni Aeronautiche<br>ITIS «E. Majorana» · Serie Raucci</div></div></div>
+    </div>
+    <div id="pb">
+      <h2>Organi di controllo primari · primary flight controls</h2>
+      <div class="cards" id="cards"></div>
+      <div id="ctl">
+        <div id="ctlmode"><button class="on" data-m="manual">✋ Manuale</button><button data-m="gesture">📷 Gestuale</button></div>
+        <div class="lab"><span id="labNeg"></span><span id="labPos"></span></div>
+        <input type="range" id="slider" min="-100" max="100" value="0">
+        <div class="btns">
+          <button class="btn acc" id="btnDemo">▶ Dimostra</button>
+          <button class="btn" id="btnReset">Ripristina</button>
+          <button class="btn" id="btnFlaps">Flap 30°</button>
+          <button class="btn small" id="btnCal" style="display:none">⌖ Calibra neutro</button>
+        </div>
+        <div id="gest"><b>Il palmo è il velivolo.</b> Mano aperta davanti alla webcam: <b>inclina il palmo</b> → rollio (alettoni) · <b>alza/abbassa la mano</b> → beccheggio (equilibratore) · <b>sposta la mano a destra/sinistra</b> → imbardata (timone). <b>Pugno chiuso</b> → comandi al neutro. Premi «Calibra neutro» tenendo la mano nella posizione di riposo.<div class="st" id="gestst">Webcam non attiva</div></div>
+        <div id="sent"></div>
+      </div>
+      <h2>La tabella da imparare a memoria</h2>
+      <table>
+        <thead><tr><th>Asse</th><th>Moto</th><th>Superficie</th><th>Stabilità</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="warn"><b>L'incrocio che genera più errori</b>
+        Il moto attorno all'asse <em>longitudinale</em> governa la stabilità <em>laterale</em>, e viceversa: i nomi delle stabilità seguono il <em>piano</em> in cui il velivolo si muove, non l'asse di rotazione.</div>
+      <div class="info" id="partInfo"></div>
+      <div class="keys">Tastiera: <kbd>←</kbd><kbd>→</kbd> barra laterale · <kbd>↑</kbd><kbd>↓</kbd> barra avanti/indietro · <kbd>Q</kbd><kbd>E</kbd> pedaliera · <kbd>0</kbd> ripristina</div>
+    </div>
+    <div id="foot"><b>© prof. BIAGIO RAUCCI</b><br>Serie Raucci · ITIS «E. Majorana» · Somma Vesuviana (NA)</div>
+  </aside>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+/* =====================================================================
+   1. Dati didattici
+   ===================================================================== */
+const AXES = {
+  x:{sym:'x', it:'longitudinale', en:'longitudinal axis'},
+  y:{sym:'y', it:'trasversale',   en:'lateral (transverse) axis'},
+  z:{sym:'z', it:'verticale',     en:'vertical axis'}
+};
+const ORGANS = {
+  ailerons:{ key:'roll',  it:'Alettoni', en:'Ailerons', sym:'Φ', axis:'x', motion:'rollio', motionEn:'roll',
+             stab:'laterale', stabEn:'lateral', color:'#ff8a3d', hex:0xff8a3d, neg:'◀ Barra a sinistra · stick left', pos:'Barra a destra · stick right ▶', parts:['aileronR','aileronL'] },
+  elevator:{ key:'pitch', it:'Equilibratore', en:'Elevator', sym:'Θ', axis:'y', motion:'beccheggio', motionEn:'pitch',
+             stab:'longitudinale', stabEn:'longitudinal', color:'#38d9f5', hex:0x38d9f5, neg:'◀ Barra avanti · stick forward', pos:'Barra indietro · stick back ▶', parts:['elevatorR','elevatorL'] },
+  rudder:  { key:'yaw',   it:'Timone', en:'Rudder', sym:'Ψ', axis:'z', motion:'imbardata', motionEn:'yaw',
+             stab:'direzionale', stabEn:'directional', color:'#ffc53d', hex:0xffc53d, neg:'◀ Pedale sinistro · left pedal', pos:'Pedale destro · right pedal ▶', parts:['rudder'] }
+};
+const FLAPDESC = 'Comando <b>secondario</b>: i due flap scendono insieme e aumentano la portanza (e la resistenza) per decollo e atterraggio. Simmetrici, non generano momento di rollio.';
+const TRIMDESC = 'Piccola superficie sul bordo d\'uscita dell\'equilibratore: deflessa in verso opposto, <b>annulla lo sforzo</b> sulla barra in volo stabilizzato (compensatore).';
+const WINGDESC = 'La <b>velatura</b>: investita dalla corrente relativa, la devia verso il basso e genera per reazione la portanza. Profilo NACA 2412, freccia 25°, diedro 6°.';
+const ENGDESC  = 'Propulsore in gondola subalare: produce la <b>spinta</b> per terza legge di Newton accelerando una massa d\'aria verso poppa.';
+const WLDESC   = 'Alette d\'estremità: ostacolano il vortice di estremità e riducono la <b>resistenza indotta</b>.';
+const PARTS = {
+  aileronR:{it:'Alettone destro', en:'Right aileron', organ:'ailerons'},
+  aileronL:{it:'Alettone sinistro', en:'Left aileron', organ:'ailerons'},
+  elevatorR:{it:'Equilibratore', en:'Elevator', organ:'elevator'},
+  elevatorL:{it:'Equilibratore', en:'Elevator', organ:'elevator'},
+  rudder:{it:'Timone', en:'Rudder', organ:'rudder'},
+  flapR:{it:'Flap (ipersostentatore)', en:'Flap', desc:FLAPDESC}, flapL:{it:'Flap (ipersostentatore)', en:'Flap', desc:FLAPDESC},
+  trimR:{it:'Aletta di trim', en:'Trim tab', desc:TRIMDESC}, trimL:{it:'Aletta di trim', en:'Trim tab', desc:TRIMDESC},
+  stab:{it:'Stabilizzatore', en:'Horizontal stabilizer', desc:'Parte <b>fissa</b> del piano orizzontale di coda: garantisce la <b>stabilità longitudinale</b> (ritorno all\'assetto dopo una perturbazione di beccheggio). L\'equilibratore è la sua parte mobile.'},
+  fin:{it:'Deriva', en:'Vertical fin', desc:'Parte <b>fissa</b> del piano verticale di coda: garantisce la <b>stabilità direzionale</b> (effetto «banderuola»). Il timone è la sua parte mobile.'},
+  wingR:{it:'Ala destra', en:'Right wing', desc:WINGDESC}, wingL:{it:'Ala', en:'Wing', desc:WINGDESC},
+  wingletR:{it:'Winglet', en:'Winglet', desc:WLDESC}, wingletL:{it:'Winglet', en:'Winglet', desc:WLDESC},
+  fuselage:{it:'Fusoliera', en:'Fuselage', desc:'Corpo centrale a sezione circolare (pressurizzazione in trazione pura): ospita equipaggio, carico e impianti e collega ala, coda e carrello.'},
+  engineR:{it:'Motore (turbofan)', en:'Engine', desc:ENGDESC}, engineL:{it:'Motore (turbofan)', en:'Engine', desc:ENGDESC},
+};
+
+/* =====================================================================
+   2. Renderer, cielo, luci, post-processing
+   ===================================================================== */
+const canvas = document.getElementById('gl');
+let renderer;
+try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, powerPreference:'high-performance'}); }
+catch(e){ document.getElementById('nogl').style.display='grid'; throw e; }
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(36, 1, 0.5, 900);
+const HOME = new THREE.Vector3(34, 14, -32);
+camera.position.copy(HOME);
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true; controls.dampingFactor = 0.06; controls.enablePan = false;
+controls.minDistance = 16; controls.maxDistance = 110; controls.target.set(0, 0.5, 0);
+controls.autoRotate = true; controls.autoRotateSpeed = 0.35; let idleT = 0;
+controls.addEventListener('start', () => { controls.autoRotate = false; idleT = 0; });
+
+const SUN = new THREE.Vector3(28, 14, -24).normalize();
+
+// --- cielo procedurale (gradiente d'alta quota, sole, nubi animate sotto l'orizzonte, stelle)
+const skyMat = new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite:false,
+  uniforms:{ uTime:{value:0}, uSun:{value:SUN} },
+  vertexShader:`varying vec3 vP; void main(){ vP = (modelMatrix*vec4(position,1.)).xyz - cameraPosition; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader:`
+    uniform float uTime; uniform vec3 uSun; varying vec3 vP;
+    float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+    float noise(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f);
+      return mix(mix(hash(i),hash(i+vec2(1,0)),f.x), mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x), f.y); }
+    float fbm(vec2 p){ float v=0., a=.5; for(int i=0;i<5;i++){ v+=a*noise(p); p=p*2.03+vec2(17.,9.); a*=.5; } return v; }
+    void main(){
+      vec3 d = normalize(vP); float h = d.y;
+      vec3 zen = vec3(0.002,0.007,0.03), mid = vec3(0.008,0.03,0.095), hor = vec3(0.07,0.15,0.27);
+      vec3 col = mix(mid, zen, smoothstep(0.05,0.75,h));
+      col = mix(hor, col, smoothstep(-0.03,0.28,h));
+      float sd = max(dot(d,uSun),0.); vec3 sunc = vec3(1.0,0.74,0.48);
+      col += sunc*(pow(sd,5.)*0.12 + pow(sd,70.)*0.7 + pow(sd,1200.)*8.0);
+      if (h < 0.10){
+        float t = 60.0/max(-h, 0.012);
+        vec2 p = d.xz*t*0.0045 + vec2(uTime*0.012, uTime*0.004);
+        float c = fbm(p*1.4); c = smoothstep(0.40, 0.72, c);
+        float fade = smoothstep(0.10,-0.05,h);
+        float lit = smoothstep(0.,1.,fbm(p*3.1+2.3));
+        vec3 cloudc = mix(vec3(0.025,0.045,0.09), vec3(0.42,0.50,0.66), 0.3+0.5*lit) + sunc*pow(sd,6.)*0.35;
+        col = mix(col, cloudc, c*fade*0.96);
+        col = mix(col, hor*0.8, fade*smoothstep(-0.25,0.04,h)*0.4);
+      }
+      if (h > 0.10){ vec2 g = d.xz/max(d.y,0.1)*420.; float s = hash(floor(g)); s = pow(s, 90.)*smoothstep(0.10,0.45,h); col += s*1.2; }
+      gl_FragColor = vec4(col, 1.0);
+    }`
+});
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(600, 48, 24), skyMat));
+// ambiente per i riflessi PBR: snapshot del cielo
+{ const envScene = new THREE.Scene(); envScene.add(new THREE.Mesh(new THREE.SphereGeometry(40, 32, 16), skyMat));
+  const pmrem = new THREE.PMREMGenerator(renderer); scene.environment = pmrem.fromScene(envScene, 0.02).texture; pmrem.dispose(); }
+
+scene.add(new THREE.HemisphereLight(0xa8c6ee, 0x1b2230, 0.5));
+const key = new THREE.DirectionalLight(0xfff1e0, 2.6);
+key.position.copy(SUN).multiplyScalar(60); key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.03;
+Object.assign(key.shadow.camera, {left:-26, right:26, top:26, bottom:-26, near:1, far:160});
+scene.add(key);
+const fill = new THREE.DirectionalLight(0x8fb4ff, 0.45); fill.position.set(-25, 8, 26); scene.add(fill);
+
+// --- particelle in deriva (cristalli di ghiaccio d'alta quota)
+const PN = 700, ppos = new Float32Array(PN*3);
+for (let i=0;i<PN;i++){ ppos[3*i]=(Math.random()-.5)*160; ppos[3*i+1]=(Math.random()-.5)*90; ppos[3*i+2]=(Math.random()-.5)*160; }
+const pgeo = new THREE.BufferGeometry(); pgeo.setAttribute('position', new THREE.BufferAttribute(ppos,3));
+const particles = new THREE.Points(pgeo, new THREE.PointsMaterial({color:0xcfe0ff, size:0.28, transparent:true, opacity:0.35, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(particles);
+
+// --- post-processing: bloom leggero
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(1,1), 0.38, 0.6, 1.25); composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+/* ---------- materiali ---------- */
+function fuselageTexture(){
+  const W=2048, H=1024, c=document.createElement('canvas'); c.width=W; c.height=H; const g=c.getContext('2d');
+  g.fillStyle='#eef2f6'; g.fillRect(0,0,W,H);
+  // pannellature: linee circonferenziali (v) e longitudinali (u), molto tenui
+  g.strokeStyle='rgba(120,135,155,0.28)'; g.lineWidth=1.2;
+  for (let v=0.08; v<0.95; v+=0.065){ const y=(1-v)*H; g.beginPath(); g.moveTo(0,y); g.lineTo(W,y); g.stroke(); }
+  g.strokeStyle='rgba(120,135,155,0.16)';
+  for (let u=0; u<1; u+=0.125){ const x=u*W; g.beginPath(); g.moveTo(x,(1-0.95)*H); g.lineTo(x,(1-0.06)*H); g.stroke(); }
+  // linea di cintura blu sotto i finestrini (lato destro u≈0, lato sinistro u≈0.5)
+  g.fillStyle='#1d6fb8';
+  for (const uc of [0.985, 0.515]) { const x=((uc)%1)*W; g.fillRect(x-0.012*W, (1-0.80)*H, 0.024*W, (0.80-0.18)*H); }
+  g.fillStyle='#1d6fb8'; g.fillRect(0,(1-0.80)*H,0.0,0); // no-op
+  // portelli (due per lato)
+  g.strokeStyle='rgba(90,105,125,0.55)'; g.lineWidth=2;
+  for (const uc of [0.0, 0.5]) for (const vc of [0.80, 0.235]) { const x=uc*W, y=(1-vc)*H; const w=0.03*W, hh=0.085*H;
+    g.beginPath(); g.roundRect(x-w/2, y-hh/2, w, hh, 10); g.stroke(); if (uc===0){ g.beginPath(); g.roundRect(W-w/2, y-hh/2, w, hh, 10); g.stroke(); } }
+  // marche d'immatricolazione
+  g.fillStyle='#1d3b5e'; g.font='bold 54px "Space Grotesk", Arial, sans-serif'; g.textAlign='center'; g.textBaseline='middle';
+  g.save(); g.translate(0.07*W, (1-0.30)*H); g.rotate(-Math.PI/2); g.fillText('I-RAUC', 0, 0); g.restore();
+  g.save(); g.translate(0.43*W, (1-0.30)*H); g.rotate(Math.PI/2); g.fillText('I-RAUC', 0, 0); g.restore();
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = THREE.RepeatWrapping; t.anisotropy = 8; return t;
+}
+const M = {
+  paint: new THREE.MeshPhysicalMaterial({color:0xeef2f6, metalness:0.08, roughness:0.28, clearcoat:1, clearcoatRoughness:0.08, envMapIntensity:1.0}),
+  fus:   new THREE.MeshPhysicalMaterial({map:fuselageTexture(), metalness:0.08, roughness:0.28, clearcoat:1, clearcoatRoughness:0.08, envMapIntensity:1.0}),
+  blue:  new THREE.MeshPhysicalMaterial({color:0x1d6fb8, metalness:0.15, roughness:0.25, clearcoat:1, clearcoatRoughness:0.08, envMapIntensity:1.0}),
+  glass: new THREE.MeshPhysicalMaterial({color:0x08121f, metalness:0.3, roughness:0.05, clearcoat:1, envMapIntensity:1.4}),
+  metal: new THREE.MeshStandardMaterial({color:0x9aa3ae, metalness:0.95, roughness:0.22, envMapIntensity:1.2}),
+  dark:  new THREE.MeshStandardMaterial({color:0x14181f, metalness:0.7, roughness:0.45}),
+  blade: new THREE.MeshStandardMaterial({color:0x7a828e, metalness:0.95, roughness:0.3, side:THREE.DoubleSide}),
+  window:new THREE.MeshStandardMaterial({color:0x08111c, metalness:0.3, roughness:0.1}),
+};
+const surfMat = (hex=0xd6dde6) => new THREE.MeshPhysicalMaterial({color:hex, metalness:0.08, roughness:0.32, clearcoat:1, clearcoatRoughness:0.1, envMapIntensity:1.0, side:THREE.DoubleSide});
+
+/* =====================================================================
+   3. Geometria procedurale (profili NACA lofati)
+   ===================================================================== */
+const aircraft = new THREE.Group(); aircraft.rotation.order = 'YZX'; scene.add(aircraft);
+const pickables = []; const partMeshes = {};
+const rad = d => d*Math.PI/180;
+
+function naca(x, m, p, t){
+  const yt = 5*t*(0.2969*Math.sqrt(x) - 0.1260*x - 0.3516*x*x + 0.2843*x**3 - 0.1036*x**4);
+  let yc = 0; if (m>0) yc = x<p ? m/(p*p)*(2*p*x - x*x) : m/((1-p)**2)*((1-2*p) + 2*p*x - x*x);
+  return [yc+yt, yc-yt];
+}
+function ring2D(c, xa, xb, af, N){
+  const up=[], lo=[];
+  for (let i=0;i<N;i++){ const s = 0.5*(1-Math.cos(Math.PI*i/(N-1))); const x = xa + (xb-xa)*s; const [yu,yl] = naca(x, af.m, af.p, af.t); up.push([x*c, yu*c]); lo.push([x*c, yl*c]); }
+  return up.concat(lo.reverse());
+}
+function ring3D(sec, af, N, plane){
+  return ring2D(sec.c, sec.xa, sec.xb, af, N).map(([u,v]) => plane==='h' ? new THREE.Vector3(sec.le.x - u, sec.le.y + v, sec.le.z) : new THREE.Vector3(sec.le.x - u, sec.le.y, sec.le.z + v));
+}
+function loft(rings, flip){
+  const pos=[], nor=[]; const n = rings[0].length;
+  const t=new THREE.Vector3(), s=new THREE.Vector3(), nv=new THREE.Vector3();
+  const normalAt = (R, Rn, j) => { t.subVectors(R[(j+1)%n], R[(j-1+n)%n]); s.subVectors(Rn[j], R[j]); nv.crossVectors(t, s).normalize(); if (flip) nv.negate(); return nv.clone(); };
+  for (let i=0;i<rings.length-1;i++){
+    const A=rings[i], B=rings[i+1]; const nA=[], nB=[];
+    for (let j=0;j<n;j++){ nA.push(normalAt(A,B,j)); nB.push(normalAt(B,A,j).negate()); }
+    for (let j=0;j<n;j++){
+      const k=(j+1)%n;
+      const tri = flip ? [A[j],B[j],A[k], A[k],B[j],B[k]] : [A[j],A[k],B[j], A[k],B[k],B[j]];
+      const nn  = flip ? [nA[j],nB[j],nA[k], nA[k],nB[j],nB[k]] : [nA[j],nA[k],nB[j], nA[k],nB[k],nB[j]];
+      for (let q=0;q<6;q++){ pos.push(tri[q].x,tri[q].y,tri[q].z); nor.push(nn[q].x,nn[q].y,nn[q].z); }
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos,3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(nor,3));
+  return g;
+}
+function capGeo(sec, af, N, plane){
+  const pts = ring2D(sec.c, sec.xa, sec.xb, af, N).map(([u,v]) => new THREE.Vector2(-u, v));
+  const g = new THREE.ShapeGeometry(new THREE.Shape(pts));
+  if (plane==='h') g.translate(sec.le.x, sec.le.y, sec.le.z); else { g.rotateX(Math.PI/2); g.translate(sec.le.x, sec.le.y, sec.le.z); }
+  return g;
+}
+function toFrame(g, frame){ if (!frame) return g; g.translate(-frame.pivot.x,-frame.pivot.y,-frame.pivot.z); g.applyQuaternion(frame.qinv); return g; }
+function addMesh(parent, geo, mat, partId, frame){
+  toFrame(geo, frame);
+  const m = new THREE.Mesh(geo, mat); m.castShadow = m.receiveShadow = true; m.userData.partId = partId; parent.add(m);
+  if (partId){ pickables.push(m); (partMeshes[partId] ||= []).push(m); }
+  return m;
+}
+function surface(parent, {sections, af, N=48, plane='h', flip=false, mat, caps=[true,true], partId, frame}){
+  const rings = sections.map(s => ring3D(s, af, N, plane));
+  addMesh(parent, loft(rings, flip), mat, partId, frame);
+  if (caps[0]) addMesh(parent, capGeo(sections[0], af, N, plane), mat, partId, frame);
+  if (caps[1]) addMesh(parent, capGeo(sections[sections.length-1], af, N, plane), mat, partId, frame);
+}
+
+const WING = {b:17, cr:6.5, ct:1.8, xr:3.5, yr:-0.95, sweep:rad(25), dihedral:rad(6), af:{m:.02,p:.4,t:.12}, flap:{a:.10, b:.60, xh:.72}, ail:{a:.66, b:.94, xh:.75}};
+const STAB = {b:6.5, cr:4.0, ct:1.8, xr:-10.8, yr:0.95, sweep:rad(30), dihedral:rad(7), af:{m:0,p:.4,t:.10}, elev:{a:.10, b:.95, xh:.65}, trim:{a:.14, b:.44, xa:.88}};
+const FIN  = {h:6.3, cr:6.0, ct:2.6, xr:-9.0, yr:1.15, sweep:rad(40), af:{m:0,p:.4,t:.10}, rud:{a:.06, b:.95, xh:.60}};
+const wingSec = (eta, side, xa=0, xb=1) => ({ le:new THREE.Vector3(WING.xr - eta*WING.b*Math.tan(WING.sweep), WING.yr + eta*WING.b*Math.tan(WING.dihedral), side*eta*WING.b), c:WING.cr + (WING.ct-WING.cr)*eta, xa, xb });
+const stabSec = (eta, side, xa=0, xb=1) => ({ le:new THREE.Vector3(STAB.xr - eta*STAB.b*Math.tan(STAB.sweep), STAB.yr + eta*STAB.b*Math.tan(STAB.dihedral), side*eta*STAB.b), c:STAB.cr + (STAB.ct-STAB.cr)*eta, xa, xb });
+const finSec  = (eta, xa=0, xb=1) => ({ le:new THREE.Vector3(FIN.xr - eta*FIN.h*Math.tan(FIN.sweep), FIN.yr + eta*FIN.h, 0), c:FIN.cr + (FIN.ct-FIN.cr)*eta, xa, xb });
+const hingePt = (sec, xh) => new THREE.Vector3(sec.le.x - xh*sec.c, sec.le.y, sec.le.z);
+const Z = new THREE.Vector3(0,0,1);
+const hinged = {};
+function makeHinge(id, pivot, dir, parent){
+  const g = new THREE.Group(); g.position.copy(pivot);
+  const q = new THREE.Quaternion().setFromUnitVectors(Z, dir.clone().normalize());
+  g.quaternion.copy(q); g.userData.q0 = q; (parent||aircraft).add(g); hinged[id] = g;
+  return {group:g, frame:{pivot, qinv:q.clone().invert()}};
+}
+function setDelta(id, deg){ const g=hinged[id]; g.quaternion.copy(g.userData.q0).multiply(new THREE.Quaternion().setFromAxisAngle(Z, rad(deg))); }
+
+/* ---------- fusoliera ---------- */
+{
+  const pts=[]; const L=15, n=100;
+  for (let i=0;i<=n;i++){
+    const a = -L + 2*L*i/n; let r;
+    if (a>9){ const u=(a-9)/6; r = 1.7*Math.pow(Math.max(0,1-Math.pow(u,2.2)),0.55); }
+    else if (a>-6) r = 1.7;
+    else { const u=(a+15)/9; r = 0.18 + 1.52*(1-Math.pow(1-u,1.7)); }
+    pts.push(new THREE.Vector2(Math.max(r,0.001), a));
+  }
+  let g = new THREE.LatheGeometry(pts, 96); g.rotateZ(-Math.PI/2);
+  g = mergeVertices(g);
+  const p = g.attributes.position;
+  for (let i=0;i<p.count;i++){ const x=p.getX(i); if (x<-5){ const u=(-5-x)/10; p.setY(i, p.getY(i) + 1.25*u*u); } }
+  g.computeVertexNormals();
+  addMesh(aircraft, g, M.fus, 'fuselage');
+  const cp = new THREE.SphereGeometry(1, 32, 16); cp.scale(1.15, 0.26, 1.2); cp.translate(12.45, 1.3, 0);
+  addMesh(aircraft, cp, M.glass, 'fuselage');
+  const win = new THREE.InstancedMesh(new THREE.CircleGeometry(0.15, 14), M.window, 2*28);
+  const d = new THREE.Object3D(); let k=0;
+  for (const side of [1,-1]) for (let i=0;i<28;i++){
+    const x = -4.2 + i*0.52; const ang=rad(28);
+    d.position.set(x, 1.7*Math.sin(ang), side*1.7*Math.cos(ang)*1.004);
+    d.lookAt(x, 1.7*Math.sin(ang)+Math.sin(ang)*5, side*(1.7*Math.cos(ang)+Math.cos(ang)*5));
+    d.updateMatrix(); win.setMatrixAt(k++, d.matrix);
+  }
+  aircraft.add(win);
+  // cono di coda APU
+  const apu = new THREE.Mesh(new THREE.ConeGeometry(0.22, 1.4, 20), M.metal); apu.rotation.z = Math.PI/2; apu.position.set(-15.4, 1.25, 0); aircraft.add(apu);
+}
+/* ---------- luci di navigazione (bloom) ---------- */
+const lights = {};
+function navLight(id, pos, r,g,b){ const m = new THREE.Mesh(new THREE.SphereGeometry(0.14, 12, 8), new THREE.MeshBasicMaterial({color:new THREE.Color(r,g,b)})); m.position.copy(pos); aircraft.add(m); lights[id]=m; return m; }
+navLight('navL', new THREE.Vector3(wingSec(1,-1).le.x-0.3, wingSec(1,-1).le.y+0.1, -17.05), 6,0.2,0.2);
+navLight('navR', new THREE.Vector3(wingSec(1,1).le.x-0.3, wingSec(1,1).le.y+0.1, 17.05), 0.2,6,0.5);
+navLight('strobe', new THREE.Vector3(-16.1, 1.25, 0), 8,8,8);
+navLight('beaconT', new THREE.Vector3(1.5, 1.78, 0), 6,0.2,0.2);
+navLight('beaconB', new THREE.Vector3(1.5, -1.78, 0), 6,0.2,0.2);
+
+/* ---------- ali ---------- */
+for (const side of [1,-1]){
+  const id = side>0 ? 'wingR' : 'wingL'; const flip = side<0;
+  const af = WING.af, F=WING.flap, A=WING.ail;
+  const S = (eta,xa,xb) => wingSec(eta, side, xa, xb);
+  const parts = [[S(0.02,0,1), S(F.a,0,1)], [S(F.a,0,F.xh), S(F.b,0,F.xh)], [S(F.b,0,1), S(A.a,0,1)], [S(A.a,0,A.xh), S(A.b,0,A.xh)], [S(A.b,0,1), S(1,0,1)]];
+  parts.forEach((secs,i) => surface(aircraft, {sections:secs, af, flip, mat:M.paint, caps:[false, i===4], partId:id}));
+  for (const [eta,xh] of [[F.a,F.xh],[F.b,F.xh],[A.a,A.xh],[A.b,A.xh]]) addMesh(aircraft, capGeo(S(eta,xh,1), af, 48, 'h'), surfMat(0xeef2f6), id);
+  { const hp0 = hingePt(S(F.a), F.xh), hp1 = hingePt(S(F.b), F.xh); const dir = side>0 ? hp1.clone().sub(hp0) : hp0.clone().sub(hp1);
+    const {group, frame} = makeHinge('flap'+(side>0?'R':'L'), hp0, dir);
+    surface(group, {sections:[S(F.a+0.004,F.xh,1), S(F.b-0.004,F.xh,1)], af, flip, mat:surfMat(0xd3dbe4), partId:side>0?'flapR':'flapL', frame}); }
+  { const hp0 = hingePt(S(A.a), A.xh), hp1 = hingePt(S(A.b), A.xh); const dir = side>0 ? hp1.clone().sub(hp0) : hp0.clone().sub(hp1);
+    const {group, frame} = makeHinge('aileron'+(side>0?'R':'L'), hp0, dir);
+    surface(group, {sections:[S(A.a+0.004,A.xh,1), S(A.b-0.004,A.xh,1)], af, flip, mat:surfMat(0xd3dbe4), partId:side>0?'aileronR':'aileronL', frame}); }
+  { const tip = S(1); const base = {le:new THREE.Vector3(tip.le.x+0.1, tip.le.y+0.02, tip.le.z), c:1.7, xa:0, xb:1};
+    const top  = {le:new THREE.Vector3(tip.le.x-1.5, tip.le.y+2.5, tip.le.z+side*0.35), c:0.75, xa:0, xb:1};
+    surface(aircraft, {sections:[base, top], af:{m:0,p:.4,t:.09}, plane:'v', flip:true, mat:M.blue, caps:[false,true], partId:side>0?'wingletR':'wingletL'}); }
+  { const eng = new THREE.Group(); const z = side*6.2, x0=-1.7, y0=-2.45;
+    const prof=[]; const n=40;
+    for (let i=0;i<=n;i++){ const a=4.5*i/n; let r = a<1.6 ? 0.78+0.42*(a/1.6) : (a<3.9 ? 1.2 : 1.2-0.12*((a-3.9)/0.6)); if (i===n) r=1.1; prof.push(new THREE.Vector2(r,a)); }
+    const ng = new THREE.LatheGeometry(prof, 56); ng.rotateZ(-Math.PI/2);
+    const nac = new THREE.Mesh(ng, M.metal); eng.add(nac);
+    const inner = new THREE.Mesh(new THREE.CylinderGeometry(1.08,1.0,1.3,48,1,true), M.dark); inner.rotation.z=Math.PI/2; inner.position.x=3.85; eng.add(inner);
+    const fan = new THREE.Group(); fan.position.x = 3.45;
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(1.0,48), M.dark); disc.rotation.y=Math.PI/2; fan.add(disc);
+    const spinner = new THREE.Mesh(new THREE.ConeGeometry(0.28,0.7,24), M.metal); spinner.rotation.z=-Math.PI/2; spinner.position.x=0.3; fan.add(spinner);
+    const bl = new THREE.InstancedMesh(new THREE.BoxGeometry(0.03,0.72,0.16), M.blade, 18); const d=new THREE.Object3D();
+    for (let i=0;i<18;i++){ const a=i/18*Math.PI*2; d.position.set(0.06, Math.cos(a)*0.62, Math.sin(a)*0.62); d.rotation.set(a+rad(35),0,0); d.updateMatrix(); bl.setMatrixAt(i,d.matrix); }
+    fan.add(bl); fan.userData.spin=true; eng.add(fan);
+    const exh = new THREE.Mesh(new THREE.ConeGeometry(0.5,1.4,24), M.dark); exh.rotation.z=Math.PI/2; exh.position.x=-0.2; eng.add(exh);
+    const pyl = new THREE.Mesh(new THREE.BoxGeometry(3.0,1.9,0.3), M.paint); pyl.position.set(0.5,1.15,0); eng.add(pyl);
+    eng.position.set(x0,y0,z); aircraft.add(eng);
+    eng.traverse(o => { if (o.isMesh){ o.castShadow=o.receiveShadow=true; o.userData.partId = side>0?'engineR':'engineL'; pickables.push(o); (partMeshes[o.userData.partId] ||= []).push(o);} });
+  }
+}
+/* ---------- piano orizzontale ---------- */
+for (const side of [1,-1]){
+  const flip = side<0, af=STAB.af, E=STAB.elev, T=STAB.trim;
+  const S = (eta,xa,xb) => stabSec(eta, side, xa, xb);
+  surface(aircraft, {sections:[S(0.0,0,1), S(E.a,0,1)], af, flip, mat:M.paint, caps:[false,false], partId:'stab'});
+  surface(aircraft, {sections:[S(E.a,0,E.xh), S(E.b,0,E.xh)], af, flip, mat:M.paint, caps:[false,false], partId:'stab'});
+  surface(aircraft, {sections:[S(E.b,0,1), S(1,0,1)], af, flip, mat:M.paint, caps:[false,true], partId:'stab'});
+  for (const eta of [E.a,E.b]) addMesh(aircraft, capGeo(S(eta,E.xh,1), af, 48, 'h'), surfMat(0xeef2f6), 'stab');
+  const hp0 = hingePt(S(E.a), E.xh), hp1 = hingePt(S(E.b), E.xh); const dir = side>0 ? hp1.clone().sub(hp0) : hp0.clone().sub(hp1);
+  const {group, frame} = makeHinge('elevator'+(side>0?'R':'L'), hp0, dir);
+  const eid = side>0?'elevatorR':'elevatorL';
+  surface(group, {sections:[S(E.a+0.004,E.xh,1), S(T.a,E.xh,1)], af, flip, mat:surfMat(0xd3dbe4), caps:[true,false], partId:eid, frame});
+  surface(group, {sections:[S(T.a,E.xh,T.xa), S(T.b,E.xh,T.xa)], af, flip, mat:surfMat(0xd3dbe4), caps:[false,false], partId:eid, frame});
+  surface(group, {sections:[S(T.b,E.xh,1), S(E.b-0.004,E.xh,1)], af, flip, mat:surfMat(0xd3dbe4), caps:[false,true], partId:eid, frame});
+  for (const eta of [T.a,T.b]) addMesh(group, capGeo(S(eta,T.xa,1), af, 48, 'h'), surfMat(0xd3dbe4), eid, frame);
+  surface(group, {sections:[S(T.a+0.004,T.xa,1), S(T.b-0.004,T.xa,1)], af, flip, mat:surfMat(0xb8c2cd), partId:side>0?'trimR':'trimL', frame});
+}
+/* ---------- piano verticale ---------- */
+{
+  const af=FIN.af, R=FIN.rud; const S = (eta,xa,xb) => finSec(eta, xa, xb);
+  surface(aircraft, {sections:[S(0,0,1), S(R.a,0,1)], af, plane:'v', flip:true, mat:M.blue, caps:[false,false], partId:'fin'});
+  surface(aircraft, {sections:[S(R.a,0,R.xh), S(R.b,0,R.xh)], af, plane:'v', flip:true, mat:M.blue, caps:[false,false], partId:'fin'});
+  surface(aircraft, {sections:[S(R.b,0,1), S(1,0,1)], af, plane:'v', flip:true, mat:M.blue, caps:[false,true], partId:'fin'});
+  for (const eta of [R.a,R.b]) addMesh(aircraft, capGeo(S(eta,R.xh,1), af, 48, 'v'), new THREE.MeshPhysicalMaterial({color:0x1d6fb8, roughness:.25, clearcoat:1, side:THREE.DoubleSide}), 'fin');
+  const hp0 = hingePt(S(R.a), R.xh), hp1 = hingePt(S(R.b), R.xh);
+  const {group, frame} = makeHinge('rudder', hp0, hp1.clone().sub(hp0));
+  surface(group, {sections:[S(R.a+0.004,R.xh,1), S(R.b-0.004,R.xh,1)], af, plane:'v', flip:true, mat:surfMat(0xd3dbe4), partId:'rudder', frame});
+}
+
+/* ---------- terna corpo ---------- */
+const axesGroup = new THREE.Group(); aircraft.add(axesGroup);
+function arrow(dir, len){
+  const g = new THREE.Group(); const mat = new THREE.MeshBasicMaterial({color:0x9fb3c8, transparent:true, opacity:0.75});
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.06,0.06,len,10), mat); shaft.position.y = len/2;
+  const cone  = new THREE.Mesh(new THREE.ConeGeometry(0.32,1.1,16), mat); cone.position.y = len+0.5;
+  g.add(shaft, cone); g.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), dir.clone().normalize());
+  g.userData.mat = mat; axesGroup.add(g); return g;
+}
+const axisObj = { x: arrow(new THREE.Vector3(1,0,0), 21), y: arrow(new THREE.Vector3(0,0,-1), 20), z: arrow(new THREE.Vector3(0,1,0), 10) };
+axesGroup.add(new THREE.Mesh(new THREE.SphereGeometry(0.28,20,12), new THREE.MeshBasicMaterial({color:0xffffff})));
+function arc(color){
+  const g = new THREE.Group(); const mat = new THREE.MeshBasicMaterial({color, transparent:true, opacity:0.95});
+  const R=3.2, a0=rad(-200), a1=rad(95);
+  const tor = new THREE.Mesh(new THREE.TorusGeometry(R, 0.09, 8, 64, a1-a0), mat); tor.rotation.z = a0; g.add(tor);
+  const cone = new THREE.Mesh(new THREE.ConeGeometry(0.34, 0.95, 16), mat); cone.position.set(R*Math.cos(a1), R*Math.sin(a1), 0); cone.rotation.z = a1; g.add(cone);
+  g.userData.mat = mat; g.visible=false; aircraft.add(g); return g;
+}
+const arcs = { roll: arc(0xff8a3d), pitch: arc(0x38d9f5), yaw: arc(0xffc53d) };
+arcs.roll.position.set(9.5,0,0);  arcs.roll.rotation.y = Math.PI/2;
+arcs.pitch.position.set(0,0,-13.5);
+arcs.yaw.position.set(0,6.5,0);   arcs.yaw.rotation.x = Math.PI/2;
+
+/* =====================================================================
+   4. Etichette: disposizione a raggiera con repulsione e linee di richiamo
+   ===================================================================== */
+const labelsEl = document.getElementById('labels'), svg = document.getElementById('leaders');
+const NS = 'http://www.w3.org/2000/svg';
+const labels = [];
+function wpt(sec, xf, dy=0){ return new THREE.Vector3(sec.le.x - xf*sec.c, sec.le.y + dy, sec.le.z); }
+function addLabel({part, it, en, pos, cls='', sym, R=1}){
+  const el = document.createElement('div'); el.className = 'lbl '+cls;
+  el.innerHTML = sym ? sym : `<b>${it}</b><span>${en}</span>`;
+  if (part){ el.dataset.part = part; el.addEventListener('click', e => { e.stopPropagation(); onPartClick(part); }); }
+  labelsEl.appendChild(el);
+  const L = {el, pos, part, cls, R, x:0, y:0, init:false, w:0, h:0};
+  if (!cls){ L.line = document.createElementNS(NS,'line'); L.dot = document.createElementNS(NS,'circle'); L.dot.setAttribute('r','3'); svg.append(L.line, L.dot); }
+  labels.push(L); return L;
+}
+addLabel({part:'aileronR', ...PARTS.aileronR, pos: wpt(wingSec(0.80,1), 0.9, 0.1), R:1.0});
+addLabel({part:'aileronL', ...PARTS.aileronL, pos: wpt(wingSec(0.80,-1), 0.9, 0.1), R:1.0});
+addLabel({part:'flapR', ...PARTS.flapR, pos: wpt(wingSec(0.40,1), 0.9, 0.12), R:1.25});
+addLabel({part:'elevatorR', ...PARTS.elevatorR, pos: wpt(stabSec(0.72,1), 0.85, 0.12), R:1.1});
+addLabel({part:'trimR', ...PARTS.trimR, pos: wpt(stabSec(0.27,1), 0.97, 0.08), R:1.5});
+addLabel({part:'stab', ...PARTS.stab, pos: wpt(stabSec(0.7,-1), 0.3, 0.12), R:1.0});
+addLabel({part:'rudder', ...PARTS.rudder, pos: wpt(finSec(0.3), 0.85, 0).add(new THREE.Vector3(0,0,-0.35)), R:1.3});
+addLabel({part:'fin', ...PARTS.fin, pos: wpt(finSec(0.8), 0.35, 0).add(new THREE.Vector3(0,0,-0.35)), R:0.9});
+addLabel({part:'wingL', ...PARTS.wingL, pos: wpt(wingSec(0.5,-1), 0.3, 0.35), R:1.2});
+addLabel({part:'wingletR', ...PARTS.wingletR, pos: new THREE.Vector3(wingSec(1,1).le.x-1.2, wingSec(1,1).le.y+2.3, 17.2), R:0.8});
+addLabel({part:'fuselage', ...PARTS.fuselage, pos: new THREE.Vector3(-5.5, 1.95, 0), R:1.4});
+addLabel({part:'engineL', ...PARTS.engineL, pos: new THREE.Vector3(1.2,-2.4,-7.65), R:1.2});
+addLabel({it:'G · baricentro', en:'centre of gravity', pos:new THREE.Vector3(0,0,0), cls:'axis'});
+addLabel({it:'x · asse longitudinale', en:'longitudinal axis', pos:new THREE.Vector3(22.6,0,0), cls:'axis'});
+addLabel({it:'y · asse trasversale', en:'lateral axis', pos:new THREE.Vector3(0,0,-21.6), cls:'axis'});
+addLabel({it:'z · asse verticale', en:'vertical axis', pos:new THREE.Vector3(0,11.6,0), cls:'axis'});
+const symLabels = {
+  roll:  addLabel({sym:'Φ', pos:new THREE.Vector3(9.5,4.2,0), cls:'sym'}),
+  pitch: addLabel({sym:'Θ', pos:new THREE.Vector3(0,4.2,-13.5), cls:'sym'}),
+  yaw:   addLabel({sym:'Ψ', pos:new THREE.Vector3(0,6.5,4.2), cls:'sym'}),
+};
+setTimeout(() => labels.forEach((L,i) => setTimeout(() => L.el.classList.add('in'), 60*i)), 500);
+
+const _v = new THREE.Vector3(), _ray = new THREE.Raycaster();
+let showLabels = true, showAxes = true;
+function updateLabels(dt){
+  const w = canvas.clientWidth, h = canvas.clientHeight; const mobile = w<900;
+  aircraft.updateMatrixWorld();
+  const cen = _v.set(0,0.5,0).applyMatrix4(aircraft.matrixWorld).project(camera); const cx=(cen.x+1)/2*w, cy=(1-cen.y)/2*h;
+  const parts = [];
+  for (const L of labels){
+    const isSym = L.cls.includes('sym'), isAxis = L.cls.includes('axis');
+    const vis = isSym ? L.el.classList.contains('show') : (isAxis ? showAxes : showLabels);
+    if (!vis){ L.el.classList.add('hidden'); if (L.line){ L.line.style.display='none'; L.dot.style.display='none'; } continue; }
+    _v.copy(L.pos).applyMatrix4(aircraft.matrixWorld); const world = _v.clone(); _v.project(camera);
+    if (_v.z>1){ L.el.classList.add('hidden'); if (L.line){ L.line.style.display='none'; L.dot.style.display='none'; } continue; }
+    L.el.classList.remove('hidden');
+    L.ax = (_v.x+1)/2*w; L.ay = (1-_v.y)/2*h;
+    if (isSym){ L.el.style.transform = `translate(${L.ax}px,${L.ay}px) translate(-50%,-50%)`; L.x=L.ax; L.y=L.ay; L.w=L.h=44; L.fixed=true; parts.push(L); continue; }
+    if (isAxis){ L.el.style.transform = `translate(${L.ax}px,${L.ay}px) translate(-50%,-110%)`; continue; }
+    // occlusione
+    const dir = world.sub(camera.position); const dist = dir.length(); dir.normalize();
+    _ray.set(camera.position, dir); _ray.far = dist - 0.35;
+    L.el.classList.toggle('dim', _ray.intersectObjects(pickables, false).length>0);
+    if (!L.w || (frame%30===0)){ L.w = L.el.offsetWidth; L.h = L.el.offsetHeight; }
+    parts.push(L);
+  }
+  // posizione desiderata: a raggiera dal centro del velivolo
+  const base = mobile ? 70 : 150;
+  for (const L of parts){
+    if (L.fixed) continue;
+    let dx = L.ax-cx, dy = L.ay-cy; const len = Math.hypot(dx,dy) || 1; dx/=len; dy/=len;
+    const r = base*L.R + Math.max(0, 0.35*(base - len));
+    L.tx = L.ax + dx*r; L.ty = L.ay + dy*r;
+    const m = 10, bot = mobile ? 10 : 100, top = 60;
+    L.tx = Math.min(Math.max(L.tx, m + L.w/2), w - m - L.w/2); L.ty = Math.min(Math.max(L.ty, top + L.h/2), h - bot - L.h/2);
+    if (!L.init){ L.x=L.tx; L.y=L.ty; L.init=true; }
+  }
+  // integrazione morbida + repulsione fra riquadri
+  const k = 1 - Math.exp(-dt*6);
+  for (const L of parts){ if (L.fixed) continue; L.x += (L.tx-L.x)*k; L.y += (L.ty-L.y)*k; }
+  for (let it=0; it<4; it++) for (let i=0;i<parts.length;i++) for (let j=i+1;j<parts.length;j++){
+    const A=parts[i], B=parts[j]; const pad=10;
+    const ox = (A.w+B.w)/2 + pad - Math.abs(A.x-B.x), oy = (A.h+B.h)/2 + pad - Math.abs(A.y-B.y);
+    if (ox>0 && oy>0){
+      const fa = A.fixed?0:(B.fixed?1:0.5), fb = 1-fa; if (A.fixed && B.fixed) continue;
+      if (ox < oy){ const s = Math.sign(A.x-B.x)||1; A.x += s*ox*fa; B.x -= s*ox*fb; } else { const s = Math.sign(A.y-B.y)||1; A.y += s*oy*fa; B.y -= s*oy*fb; }
+    }
+  }
+  for (const L of parts){
+    if (L.fixed) continue;
+    L.el.style.transform = `translate(${L.x - L.w/2}px,${L.y - L.h/2}px)`;
+    // punto d'uscita della linea sul bordo del riquadro
+    const vx = L.ax-L.x, vy = L.ay-L.y; const hw=L.w/2+2, hh=L.h/2+2;
+    const t = Math.min(hw/Math.max(Math.abs(vx),1e-3), hh/Math.max(Math.abs(vy),1e-3));
+    const ex = L.x + vx*Math.min(t,1), ey = L.y + vy*Math.min(t,1);
+    L.line.style.display = t<1 ? '' : 'none'; L.dot.style.display='';
+    L.line.setAttribute('x1',ex); L.line.setAttribute('y1',ey); L.line.setAttribute('x2',L.ax); L.line.setAttribute('y2',L.ay);
+    L.dot.setAttribute('cx',L.ax); L.dot.setAttribute('cy',L.ay);
+    const act = L.el.classList.contains('active'); L.line.classList.toggle('active', act); L.dot.classList.toggle('active', act);
+    L.line.style.opacity = L.dot.style.opacity = L.el.classList.contains('dim') ? 0.35 : 1;
+  }
+}
+
+/* =====================================================================
+   5. Stato, dinamica, UI
+   ===================================================================== */
+const S = { organ:'ailerons', cmd:{roll:0, pitch:0, yaw:0}, flaps:false, demo:false, demoT:0, hover:null,
+  att:{roll:{x:0,v:0}, pitch:{x:0,v:0}, yaw:{x:0,v:0}}, del:{aR:{x:0,v:0}, aL:{x:0,v:0}, e:{x:0,v:0}, r:{x:0,v:0}, f:{x:0,v:0}} };
+const GAIN = {roll:[30,20], pitch:[14,20], yaw:[18,25]};
+function spring(s, target, w, dt){ const a = w*w*(target-s.x) - 2*w*s.v; s.v += a*dt; s.x += s.v*dt; }
+const $ = id => document.getElementById(id);
+const cardsEl=$('cards'), tbody=$('tbody'), slider=$('slider'), sent=$('sent'), partInfo=$('partInfo');
+for (const [id,o] of Object.entries(ORGANS)){
+  const ax = AXES[o.axis];
+  const c = document.createElement('div'); c.className='card'; c.dataset.organ=id; c.style.setProperty('--acc', o.color);
+  c.innerHTML = `<div class="sym">${o.sym}</div><div><div class="n">${o.it} <i>· ${o.en}</i></div>
+    <div class="m">asse <b>${ax.sym}</b> ${ax.it} <em>·</em> moto: <b>${o.motion}</b> (${o.motionEn}) <em>·</em> stabilità <b>${o.stab}</b> (${o.stabEn})</div></div>`;
+  c.addEventListener('click', () => selectOrgan(id)); cardsEl.appendChild(c);
+  const tr = document.createElement('tr'); tr.dataset.organ=id; tr.style.setProperty('--acc', o.color);
+  tr.innerHTML = `<td><b>${ax.sym}</b> ${ax.it}<i>${ax.en}</i></td><td>${o.motion} (${o.sym})<i>${o.motionEn}</i></td><td>${o.it.toLowerCase()}<i>${o.en.toLowerCase()}</i></td><td>${o.stab}<i>${o.stabEn}</i></td>`;
+  tr.addEventListener('click', () => selectOrgan(id)); tbody.appendChild(tr);
+}
+function setEmissive(partIds, hex, k){ for (const pid of partIds) for (const m of (partMeshes[pid]||[])) if (m.material.emissive){ m.material.emissive.set(hex); m.material.emissiveIntensity = k; } }
+function selectOrgan(id, keep=false){
+  const o = ORGANS[id]; S.organ = id; S.demo=false; $('btnDemo').classList.remove('on');
+  if (!keep) for (const k of Object.keys(S.cmd)) if (k!==o.key) S.cmd[k]=0;
+  document.documentElement.style.setProperty('--acc', o.color);
+  for (const el of document.querySelectorAll('.card,tr[data-organ]')) el.classList.toggle('on', el.dataset.organ===id);
+  $('labNeg').textContent = o.neg; $('labPos').textContent = o.pos; slider.value = Math.round(S.cmd[o.key]*100);
+  if (G.on) $('btnDemo').disabled = true;
+  for (const [k,a] of Object.entries(arcs)) a.visible = showAxes && k===o.key;
+  for (const [k,l] of Object.entries(symLabels)) l.el.classList.toggle('show', k===o.key);
+  for (const [k,a] of Object.entries(axisObj)){ a.userData.mat.color.set(k===o.axis ? o.hex : 0x9fb3c8); a.userData.mat.opacity = k===o.axis ? 1 : 0.55; }
+  for (const L of labels) if (L.part){ L.el.classList.toggle('active', PARTS[L.part].organ===id); L.el.style.setProperty('--acc', o.color); }
+  for (const pid of Object.keys(PARTS)) if (PARTS[pid].organ) setEmissive([pid], 0x000000, 0);
+  partInfo.innerHTML = `<b>${o.it} · ${o.en}</b> — comando <b>primario</b>: ruota il velivolo attorno all'asse <b>${AXES[o.axis].sym}</b> (${AXES[o.axis].it}) producendo il <b>${o.motion}</b> (${o.motionEn}); l'equilibrio attorno a quest'asse è la <b>stabilità ${o.stab}</b> (${o.stabEn}). <i>Muovi il cursore o premi «Dimostra».</i>`;
+  updateSentence();
+}
+function onPartClick(pid){
+  const p = PARTS[pid];
+  if (p.organ) selectOrgan(p.organ); else partInfo.innerHTML = `<b>${p.it} · ${p.en}</b> — ${p.desc}`;
+  $('hint').classList.add('gone');
+}
+function updateSentence(){
+  const o = ORGANS[S.organ]; const c = S.cmd[o.key]; const s = Math.abs(c)<0.04 ? 0 : Math.sign(c); let t;
+  if (o.key==='roll') t = s===0 ? 'Barra al centro: alettoni neutri, nessun momento di rollio.' :
+    s>0 ? '<b>Barra a destra</b>: alettone destro <b>su</b> ↑, sinistro <b>giù</b> ↓ → l\'ala destra perde portanza, la sinistra ne guadagna → <b>rollio a destra</b> (Φ &gt; 0). Nota il verso «controintuitivo»: va giù l\'ala il cui alettone sale.' :
+          '<b>Barra a sinistra</b>: alettone sinistro <b>su</b> ↑, destro <b>giù</b> ↓ → l\'ala sinistra perde portanza, la destra ne guadagna → <b>rollio a sinistra</b> (Φ &lt; 0).';
+  else if (o.key==='pitch') t = s===0 ? 'Barra al centro: equilibratore neutro, assetto di equilibrio.' :
+    s>0 ? '<b>Barra indietro</b>: equilibratore <b>su</b> ↑ → la coda viene spinta verso il <b>basso</b> → il muso si alza: <b>cabrata</b> (Θ &gt; 0).' :
+          '<b>Barra avanti</b>: equilibratore <b>giù</b> ↓ → la coda viene spinta verso l\'<b>alto</b> → il muso si abbassa: <b>picchiata</b> (Θ &lt; 0).';
+  else t = s===0 ? 'Pedaliera al centro: timone neutro, nessun momento d\'imbardata.' :
+    s>0 ? '<b>Pedale destro</b>: timone a <b>destra</b> → la coda viene spinta a <b>sinistra</b> → il muso ruota a destra: <b>imbardata a destra</b> (Ψ &gt; 0).' :
+          '<b>Pedale sinistro</b>: timone a <b>sinistra</b> → la coda viene spinta a <b>destra</b> → il muso ruota a sinistra: <b>imbardata a sinistra</b> (Ψ &lt; 0).';
+  sent.innerHTML = (G.on ? '<span style="color:var(--cyan)">[gestuale]</span> ' : '') + t;
+}
+slider.addEventListener('input', () => { if (G.on) return; S.demo=false; $('btnDemo').classList.remove('on'); S.cmd[ORGANS[S.organ].key] = slider.value/100; updateSentence(); });
+$('btnDemo').addEventListener('click', () => { S.demo=!S.demo; S.demoT=0; $('btnDemo').classList.toggle('on', S.demo); });
+$('btnReset').addEventListener('click', () => { S.cmd={roll:0,pitch:0,yaw:0}; S.demo=false; $('btnDemo').classList.remove('on'); slider.value=0; updateSentence(); });
+$('btnFlaps').addEventListener('click', () => { S.flaps=!S.flaps; $('btnFlaps').classList.toggle('on', S.flaps); if (S.flaps) partInfo.innerHTML = `<b>${PARTS.flapR.it} · ${PARTS.flapR.en}</b> — ${PARTS.flapR.desc}`; });
+$('chipLabels').addEventListener('click', e => { showLabels=!showLabels; e.currentTarget.classList.toggle('on', showLabels); });
+$('chipAxes').addEventListener('click', e => { showAxes=!showAxes; e.currentTarget.classList.toggle('on', showAxes); axesGroup.visible=showAxes; selectOrgan(S.organ); });
+let viewAnim = null;
+$('chipView').addEventListener('click', () => { viewAnim = {t:0, from:camera.position.clone(), to:HOME.clone()}; controls.autoRotate=false; idleT=0; });
+window.addEventListener('keydown', e => {
+  if (e.target.tagName==='INPUT') return;
+  const map = {ArrowLeft:['roll',-1,'ailerons'], ArrowRight:['roll',1,'ailerons'], ArrowUp:['pitch',-1,'elevator'], ArrowDown:['pitch',1,'elevator'], KeyQ:['yaw',-1,'rudder'], KeyE:['yaw',1,'rudder']};
+  if (map[e.code] && !G.on){ e.preventDefault(); const [k,s,org] = map[e.code]; if (S.organ!==org) selectOrgan(org); S.demo=false; S.cmd[k] = Math.max(-1, Math.min(1, S.cmd[k] + 0.25*s)); slider.value=Math.round(S.cmd[k]*100); updateSentence(); }
+  if (e.code==='Digit0' || e.code==='Numpad0') $('btnReset').click();
+});
+/* =====================================================================
+   5b. Comando gestuale (MediaPipe Hands): il palmo è il velivolo
+   ===================================================================== */
+const G = { on:false, loading:false, ready:false, hands:null, cam:null, present:false, open:0, raw:{roll:0,pitch:0,yaw:0},
+            cur:{x:.5,y:.5,a:0}, neutral:{x:.5,y:.5,a:0}, lastDom:0 };
+const GG = { roll:rad(40), pitch:0.20, yaw:0.22, dead:0.06 };   // ampiezze di gesto a comando pieno
+const camEl=$('cam'), camv=$('camv'), camc=$('camc'), cammsg=$('cammsg'), gestst=$('gestst');
+function loadScript(src){ return new Promise((res,rej) => { const sc=document.createElement('script'); sc.src=src; sc.crossOrigin='anonymous'; sc.onload=res; sc.onerror=() => rej(new Error('script '+src)); document.head.appendChild(sc); }); }
+function dz(v){ const d=GG.dead; return Math.abs(v)<d ? 0 : Math.sign(v)*(Math.abs(v)-d)/(1-d); }
+function onHands(results){
+  const ctx = camc.getContext('2d'); camc.width = camv.videoWidth||640; camc.height = camv.videoHeight||360;
+  ctx.clearRect(0,0,camc.width,camc.height);
+  const lm = results.multiHandLandmarks && results.multiHandLandmarks[0];
+  if (!lm){ G.present=false; camEl.className=''; cammsg.textContent='Nessuna mano rilevata — mostra il palmo alla webcam'; gestst.textContent='Nessuna mano · comandi al neutro'; return; }
+  G.present = true;
+  if (window.drawConnectors){ drawConnectors(ctx, lm, HAND_CONNECTIONS, {color:'rgba(56,217,245,.9)', lineWidth:2}); drawLandmarks(ctx, lm, {color:'#fff', lineWidth:1, radius:2.5}); }
+  // apertura della mano: distanza media punte-polso / dimensione del palmo
+  const w=lm[0], mcp=lm[9]; const hs = Math.hypot(mcp.x-w.x, mcp.y-w.y) || 1e-3;
+  let tip=0; for (const i of [8,12,16,20]) tip += Math.hypot(lm[i].x-w.x, lm[i].y-w.y); tip/=4;
+  G.open = Math.max(0, Math.min(1, (tip/hs - 1.2)/(2.1-1.2)));
+  // assetto del palmo: posizione del centro palmo e inclinazione dell'asse polso→nocca del medio
+  G.cur.x = (w.x+mcp.x)/2; G.cur.y = (w.y+mcp.y)/2; G.cur.a = Math.atan2(mcp.x-w.x, -(mcp.y-w.y));
+  if (G.open > 0.5){
+    // immagine non specularizzata: la destra dell'utente è a sinistra nell'immagine → segni invertiti su x e sull'angolo
+    G.raw.roll  = dz(Math.max(-1, Math.min(1, -(G.cur.a - G.neutral.a)/GG.roll)));
+    G.raw.pitch = dz(Math.max(-1, Math.min(1, -(G.cur.y - G.neutral.y)/GG.pitch)));
+    G.raw.yaw   = dz(Math.max(-1, Math.min(1, -(G.cur.x - G.neutral.x)/GG.yaw)));
+    camEl.className='hand'; cammsg.textContent='MANO APERTA · comando attivo';
+  } else { G.raw.roll=G.raw.pitch=G.raw.yaw=0; camEl.className='fist'; cammsg.textContent='PUGNO · comandi al neutro'; }
+}
+async function startGesture(){
+  if (G.loading) return; G.loading=true; camEl.style.display='block'; cammsg.textContent='Caricamento MediaPipe…';
+  try {
+    if (!window.Hands){ await loadScript('https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js'); await loadScript('https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js'); await loadScript('https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js'); }
+    if (!G.hands){ G.hands = new Hands({locateFile: f => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${f}`}); G.hands.setOptions({maxNumHands:1, modelComplexity:1, minDetectionConfidence:0.6, minTrackingConfidence:0.6}); G.hands.onResults(onHands); }
+    cammsg.textContent='Consenti l\'accesso alla webcam…';
+    G.cam = new Camera(camv, { onFrame: async () => { if (G.on) await G.hands.send({image:camv}); }, width:640, height:360 });
+    await G.cam.start();
+    G.ready=true; G.on=true; cammsg.textContent='Mostra il palmo alla webcam';
+  } catch(e){ console.error(e); cammsg.textContent='Webcam non disponibile: '+(e.message||e); gestst.textContent='Errore webcam — torno al comando manuale'; setTimeout(() => setCtlMode('manual'), 2500); }
+  G.loading=false;
+}
+function stopGesture(){
+  G.on=false; G.present=false; camEl.style.display='none';
+  try { if (G.cam && G.cam.stop) G.cam.stop(); } catch(e){}
+  try { const st = camv.srcObject; if (st) st.getTracks().forEach(t => t.stop()); camv.srcObject=null; } catch(e){}
+  G.cam=null;
+}
+function setCtlMode(m){
+  document.querySelectorAll('#ctlmode button').forEach(b => b.classList.toggle('on', b.dataset.m===m));
+  const g = m==='gesture';
+  $('gest').style.display = g?'block':'none'; $('btnCal').style.display = g?'':'none';
+  slider.disabled = g; $('btnDemo').disabled = g; S.demo=false; $('btnDemo').classList.remove('on');
+  S.cmd={roll:0,pitch:0,yaw:0}; slider.value=0;
+  if (g) startGesture(); else { stopGesture(); updateSentence(); }
+}
+document.querySelectorAll('#ctlmode button').forEach(b => b.addEventListener('click', () => setCtlMode(b.dataset.m)));
+$('btnCal').addEventListener('click', () => { if (G.present){ G.neutral = {...G.cur}; gestst.textContent='Neutro calibrato sulla posizione attuale della mano'; } });
+function gestureTick(dt){
+  if (!G.on) return;
+  const k = 1 - Math.exp(-dt*8); const act = G.present && G.open>0.5;
+  for (const key of ['roll','pitch','yaw']) S.cmd[key] += ((act ? G.raw[key] : 0) - S.cmd[key])*k;
+  // l'organo evidenziato segue il comando dominante
+  G.lastDom += dt;
+  if (G.lastDom > 0.4){ G.lastDom=0; let best=null, bv=0.25; for (const [id,o] of Object.entries(ORGANS)) if (Math.abs(S.cmd[o.key])>bv){ bv=Math.abs(S.cmd[o.key]); best=id; } if (best && best!==S.organ) selectOrgan(best, true); }
+  const o = ORGANS[S.organ]; slider.value = Math.round(S.cmd[o.key]*100); updateSentence();
+  if (act) gestst.textContent = `Φ ${fmt(GAIN.roll[0]*S.cmd.roll,0)}° · Θ ${fmt(GAIN.pitch[0]*S.cmd.pitch,0)}° · Ψ ${fmt(GAIN.yaw[0]*S.cmd.yaw,0)}° — apertura mano ${Math.round(G.open*100)}%`;
+}
+
+/* ---------- picking ---------- */
+const pointer = new THREE.Vector2(); let downAt=null;
+function pick(ev){
+  const r = canvas.getBoundingClientRect(); pointer.set(((ev.clientX-r.left)/r.width)*2-1, -((ev.clientY-r.top)/r.height)*2+1);
+  _ray.setFromCamera(pointer, camera); _ray.far = Infinity;
+  const hits = _ray.intersectObjects(pickables, false); return hits.length ? hits[0].object.userData.partId : null;
+}
+canvas.addEventListener('pointermove', ev => {
+  const pid = pick(ev);
+  if (pid!==S.hover){
+    if (S.hover && !(PARTS[S.hover].organ===S.organ)) setEmissive([S.hover], 0x000000, 0);
+    S.hover = pid; canvas.style.cursor = pid ? 'pointer' : 'grab';
+    if (pid && PARTS[pid].organ!==S.organ) setEmissive([pid], 0xffffff, 0.12);
+    for (const L of labels) if (L.part) L.el.classList.toggle('hover', L.part===pid);
+  }
+});
+canvas.addEventListener('pointerdown', ev => { downAt=[ev.clientX, ev.clientY]; });
+canvas.addEventListener('pointerup', ev => { if (!downAt) return; const d = Math.hypot(ev.clientX-downAt[0], ev.clientY-downAt[1]); downAt=null; if (d<6){ const pid = pick(ev); if (pid) onPartClick(pid); } });
+
+/* =====================================================================
+   6. Loop
+   ===================================================================== */
+function resize(){
+  const w = canvas.clientWidth, h = canvas.clientHeight, pr = renderer.getPixelRatio();
+  if (canvas.width!==Math.floor(w*pr) || canvas.height!==Math.floor(h*pr)){ renderer.setSize(w,h,false); composer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix(); svg.setAttribute('viewBox',`0 0 ${w} ${h}`); }
+}
+const clock = new THREE.Clock(); let tPulse=0, frame=0;
+const fmt = (x,d=1) => (x>=0?'+':'−') + Math.abs(x).toFixed(d);
+function animate(){
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05); tPulse += dt; frame++;
+  resize();
+  gestureTick(dt);
+  if (S.demo){
+    S.demoT += dt; const o = ORGANS[S.organ]; const ramp = Math.min(1, S.demoT/0.6);
+    S.cmd[o.key] = ramp*Math.sin(2*Math.PI*S.demoT/4.2); slider.value = Math.round(S.cmd[o.key]*100); updateSentence();
+    if (S.demoT>12.6){ S.demo=false; S.cmd[o.key]=0; slider.value=0; $('btnDemo').classList.remove('on'); updateSentence(); }
+  }
+  spring(S.del.aR, -GAIN.roll[1]*S.cmd.roll, 11, dt); spring(S.del.aL, GAIN.roll[1]*S.cmd.roll, 11, dt);
+  spring(S.del.e, -GAIN.pitch[1]*S.cmd.pitch, 11, dt); spring(S.del.r, GAIN.yaw[1]*S.cmd.yaw, 11, dt); spring(S.del.f, S.flaps?30:0, 3.5, dt);
+  spring(S.att.roll, GAIN.roll[0]*S.cmd.roll, 2.6, dt); spring(S.att.pitch, GAIN.pitch[0]*S.cmd.pitch, 2.6, dt); spring(S.att.yaw, GAIN.yaw[0]*S.cmd.yaw, 2.6, dt);
+  setDelta('aileronR', S.del.aR.x); setDelta('aileronL', S.del.aL.x); setDelta('elevatorR', S.del.e.x); setDelta('elevatorL', S.del.e.x); setDelta('rudder', S.del.r.x); setDelta('flapR', S.del.f.x); setDelta('flapL', S.del.f.x);
+  aircraft.rotation.set(rad(S.att.roll.x + 0.6*Math.sin(tPulse*0.5)), -rad(S.att.yaw.x), rad(S.att.pitch.x + 0.4*Math.sin(tPulse*0.8)), 'YZX');
+  aircraft.position.y = 0.15*Math.sin(tPulse*0.7);
+  aircraft.traverse(o => { if (o.userData.spin) o.rotation.x -= dt*11; });
+  // luci: beacon rotante, strobe doppio lampo
+  const bk = 0.5+0.5*Math.sin(tPulse*4.5); lights.beaconT.material.color.setRGB(1+8*bk,0.1,0.1); lights.beaconB.material.color.copy(lights.beaconT.material.color);
+  const sp = (tPulse%1.6); const st = (sp<0.06 || (sp>0.18 && sp<0.24)) ? 12 : 0.6; lights.strobe.material.color.setRGB(st,st,st);
+  const o = ORGANS[S.organ]; const k = 0.22 + 0.2*(0.5+0.5*Math.sin(tPulse*3.2));
+  setEmissive(o.parts, o.hex, k); arcs[o.key].userData.mat.opacity = 0.6 + 0.4*(0.5+0.5*Math.sin(tPulse*3.2));
+  // cielo e particelle
+  skyMat.uniforms.uTime.value = tPulse;
+  const pa = pgeo.attributes.position; for (let i=0;i<PN;i++){ let x = pa.getX(i) - dt*7; if (x<-80) x += 160; pa.setX(i, x); } pa.needsUpdate = true;
+  // auto-rotazione quando inattivo
+  idleT += dt; if (!controls.autoRotate && idleT>25 && !viewAnim) controls.autoRotate = true;
+  $('roPhi').innerHTML = fmt(S.att.roll.x)+'<small>°</small>'; $('roTheta').innerHTML = fmt(S.att.pitch.x)+'<small>°</small>'; $('roPsi').innerHTML = fmt(S.att.yaw.x)+'<small>°</small>';
+  $('roA').innerHTML = `${fmt(S.del.aR.x,0)} / ${fmt(S.del.aL.x,0)}<small>°</small>`; $('roE').innerHTML = fmt(S.del.e.x,0)+'<small>°</small>'; $('roR').innerHTML = fmt(S.del.r.x,0)+'<small>°</small>';
+  if (viewAnim){ viewAnim.t += dt/1.1; const u = viewAnim.t>=1?1:1-Math.pow(1-viewAnim.t,3); camera.position.lerpVectors(viewAnim.from, viewAnim.to, u); if (viewAnim.t>=1) viewAnim=null; }
+  controls.update();
+  composer.render();
+  updateLabels(dt);
+}
+selectOrgan('ailerons');
+window.__dbg = {camera, controls, G, S, onHands, setCtlMode};
+setTimeout(() => $('hint').classList.add('gone'), 9000);
+animate();
+</script>
+</body>
+</html>
