@@ -2,7 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#060a14">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>Assi, moti e organi di controllo — prof. Biagio Raucci</title>
 <meta name="description" content="Modello 3D interattivo: assi corpo, moti di rollio/beccheggio/imbardata, organi di controllo e tipi di stabilità del velivolo. Costruzioni Aeronautiche, classe III — prof. Biagio Raucci.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%20%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22lgBg%22%20cx%3D%2250%25%22%20cy%3D%2238%25%22%20r%3D%2265%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2316314f%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23060b16%22/%3E%0A%20%20%20%20%3C/radialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lgAc%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffffff%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%239fdcf0%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lgRing%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%238ff1ff%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231e7fa0%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22url%28%23lgBg%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22none%22%20stroke%3D%22url%28%23lgRing%29%22%20stroke-width%3D%222%22/%3E%0A%20%20%3C%21--%20bezel%3A%20tacche%20come%20un%20indicatore%20d%27assetto%20--%3E%0A%20%20%3Cg%20stroke%3D%22%237fb8cc%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.75%22%3E%0A%20%20%20%20%3Cline%20x1%3D%2250%22%20y1%3D%227%22%20x2%3D%2250%22%20y2%3D%2212%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2288%22%20x2%3D%2250%22%20y2%3D%2293%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%227%22%20y1%3D%2250%22%20x2%3D%2212%22%20y2%3D%2250%22/%3E%3Cline%20x1%3D%2288%22%20y1%3D%2250%22%20x2%3D%2293%22%20y2%3D%2250%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20tre%20archi%3A%20rollio%20%28arancio%29%2C%20beccheggio%20%28ciano%29%2C%20imbardata%20%28ambra%29%20--%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke-width%3D%223.4%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M24.4%2021.2%20A39%2039%200%200%201%2041.6%2012.0%22%20stroke%3D%22%23ff8a3d%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M86.2%2035.6%20A39%2039%200%200%201%2086.2%2064.4%22%20stroke%3D%22%2338d9f5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M41.6%2088.0%20A39%2039%200%200%201%2024.4%2078.8%22%20stroke%3D%22%23ffc53d%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20velivolo%20in%20pianta%2C%20ala%20a%20freccia%20--%3E%0A%20%20%3Cpath%20fill%3D%22url%28%23lgAc%29%22%20d%3D%22M50%2017%20C52.2%2019%2053.2%2023%2053.2%2029%20L53.2%2043.5%20L81%2058.5%20L81%2063%20L53.2%2056.5%20L53.2%2070.5%20L62.5%2077.5%20L62.5%2081%20L51.6%2078.6%20L50%2083%20L48.4%2078.6%20L37.5%2081%20L37.5%2077.5%20L46.8%2070.5%20L46.8%2056.5%20L19%2063%20L19%2058.5%20L46.8%2043.5%20L46.8%2029%20C46.8%2023%2047.8%2019%2050%2017%20Z%22/%3E%0A%20%20%3Cpath%20fill%3D%22%231d6fb8%22%20d%3D%22M50%2017%20C51%2018.2%2051.6%2020.4%2051.7%2023%20L48.3%2023%20C48.4%2020.4%2049%2018.2%2050%2017%20Z%22%20opacity%3D%22.9%22/%3E%0A%3C/svg%3E">
@@ -18,7 +20,8 @@
     --f-ui:'Space Grotesk',system-ui,sans-serif; --f-hud:'Orbitron',sans-serif; --f-mono:'JetBrains Mono',ui-monospace,monospace;
   }
   *{box-sizing:border-box} html,body{height:100%;margin:0}
-  body{font-family:var(--f-ui);color:var(--txt);background:var(--bg0);overflow:hidden;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--f-ui);color:var(--txt);background:var(--bg0);overflow:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overscroll-behavior:none}
+  .only-m{display:none}
   #app{position:fixed;inset:0;display:grid;grid-template-columns:1fr 400px}
   #stage{position:relative;overflow:hidden}
   #gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
@@ -125,12 +128,85 @@
   #foot{padding:12px 20px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:10.5px;color:var(--mut);letter-spacing:.06em;line-height:1.6}
   #foot b{color:#fff;font-family:var(--f-hud);letter-spacing:.1em;font-size:11px}
 
-  @media (max-width:900px){
-    #app{grid-template-columns:1fr;grid-template-rows:1fr auto}
-    #panel{border-left:0;border-top:1px solid var(--line);max-height:50vh}
-    #ph{padding:12px 16px 10px} #ph h1{font-size:14px} #pb{padding:12px 16px 18px}
-    #hud{bottom:10px;left:10px;right:10px} .hudbox{padding:8px 10px;gap:10px} .ro{min-width:70px} .ro .v{font-size:16px}
-    #hint,#sig{display:none} .lbl{font-size:11px;padding:4px 7px}
+  .ro .sub{display:none;font-family:var(--f-mono);font-size:10px;color:var(--mut);margin-top:1px;font-variant-numeric:tabular-nums}
+  #grab{display:none}
+  #toast{position:absolute;left:50%;top:48px;transform:translate(-50%,-8px);font-size:12px;padding:6px 12px;border-radius:999px;background:rgba(6,10,20,.85);border:1px solid var(--line2);opacity:0;pointer-events:none;transition:.25s;white-space:nowrap}
+  #toast.on{opacity:1;transform:translate(-50%,0)}
+
+  /* ======== Compatto: telefoni (verticale e orizzontale) e finestre strette ======== */
+  @media (max-width:900px), (max-height:560px){
+    #app{grid-template-columns:minmax(0,1fr) 300px}
+    .only-m{display:block}
+    #hint,#sig,.keys,#ph .eyebrow,#ph .sub,#ph h1,#author .role{display:none}
+    /* intestazione: solo marchio + nome + titolo breve */
+    #ph{padding:10px 12px 8px;background:none}
+    #author{margin:0;padding:7px 10px;gap:10px;border-radius:12px}
+    #author .logo{width:38px;height:38px;flex-basis:38px}
+    #author .who{font-size:12px}
+    #author .ttl{font-size:10.5px;color:var(--mut);letter-spacing:.04em;margin-top:2px}
+    #pb{padding:8px 12px 14px}
+    #pb > h2:first-child{display:none}
+    h2{margin:14px 0 6px}
+    /* schede organo: tre pulsanti affiancati */
+    .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+    .card{grid-template-columns:1fr;justify-items:center;text-align:center;padding:7px 4px 6px;gap:1px}
+    .card .m,.card .dot{display:none}
+    .card .sym{font-size:18px;width:auto;line-height:1.1}
+    .card .n{font-size:12.5px;line-height:1.2} .card .n i{display:block;font-size:10.5px}
+    #ctl{padding:9px 10px;margin-top:8px}
+    #ctlmode{margin-bottom:6px} #ctlmode button{padding:7px 4px;font-size:10.5px}
+    #ctl .lab{font-size:10px;margin-bottom:2px}
+    input[type=range]{margin:8px 0 10px;height:5px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    .btns{gap:6px} .btn{padding:7px 9px;font-size:10.5px}
+    #sent{font-size:12.5px;min-height:0;margin-top:8px;padding:8px 10px}
+    #gest{font-size:11.5px;margin-top:8px}
+    table{font-size:11.5px} td{padding:6px 6px} th{padding:5px 6px}
+    .warn,.info{font-size:12px;padding:10px 12px}
+    #foot{display:none}
+    .foot-m{margin-top:14px;padding:10px 2px calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--line);font-family:var(--f-mono);font-size:9.5px;color:var(--mut);letter-spacing:.05em;line-height:1.6}
+    .foot-m b{color:#fff;font-family:var(--f-hud);letter-spacing:.08em}
+    #ctl .lab .en{display:none}
+    /* scena */
+    #topbar{left:10px;top:10px;gap:6px}
+    .chip{font-size:10px;padding:5px 9px}
+    #hud{left:8px;right:8px;bottom:8px;justify-content:center}
+    .hudbox{padding:7px 10px;gap:0;width:100%;max-width:440px;justify-content:space-between}
+    .hudbox + .hudbox{display:none}
+    .ro{min-width:0;flex:1;text-align:center}
+    .ro .k{font-size:9.5px;letter-spacing:.05em} .ro .k .en{display:none}
+    .ro .v{font-size:15px;margin-top:1px} .ro .sub{display:block}
+    .lbl{font-size:10.5px;padding:4px 7px;border-radius:7px} .lbl span{font-size:9.5px}
+    .lbl.axis{font-size:9.5px;padding:3px 6px} .lbl.axis b{font-size:10.5px} .lbl.axis span{display:none} .lbl.g{display:none!important}
+    .lbl.sym{font-size:16px;padding:2px 8px}
+    #cam{width:128px;top:46px;left:10px} #cam .tag{display:none} #cam .msg{font-size:9px;padding:3px 6px}
+  }
+
+  /* ======== Telefono in verticale: scena in alto, pannello a scomparsa in basso ======== */
+  @media (max-width:900px) and (orientation:portrait){
+    #app{display:block}
+    #stage{position:fixed;left:0;right:0;top:0;height:calc(54vh + 18px);height:calc(54dvh + 18px)}
+    #panel{position:fixed;left:0;right:0;bottom:0;height:46vh;height:46dvh;z-index:5;border-left:0;border-top:1px solid var(--line2);
+      border-radius:18px 18px 0 0;box-shadow:0 -14px 40px -12px rgba(0,0,0,.7);transition:height .38s cubic-bezier(.2,.8,.2,1);background:rgba(8,13,25,.92)}
+    #app.sheet-open #panel{height:88vh;height:88dvh}
+    #grab{display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px 0 2px;cursor:pointer;touch-action:none;user-select:none;flex:0 0 auto}
+    #grab i{display:block;width:42px;height:4px;border-radius:2px;background:rgba(255,255,255,.28)}
+    #grab span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase}
+    #ph{padding-top:4px}
+    #hud{bottom:26px}
+  }
+  /* telefoni bassi in verticale (iPhone SE e simili): si recupera spazio */
+  @media (max-width:900px) and (orientation:portrait) and (max-height:720px){
+    #grab{padding:6px 0 0} #grab span{display:none}
+    #author{padding:5px 8px} #author .logo{width:30px;height:30px;flex-basis:30px} #author .ttl{display:none}
+    #ph{padding:2px 12px 6px} .card{padding:5px 4px 4px} .card .sym{font-size:16px}
+    .hudbox{padding:5px 8px} .ro .v{font-size:14px}
+  }
+  /* telefono in orizzontale: pannello laterale stretto */
+  @media (max-height:560px) and (orientation:landscape){
+    #app{grid-template-columns:minmax(0,1fr) 280px}
+    #ph{padding:8px 10px 6px} #author .logo{width:32px;height:32px;flex-basis:32px}
+    #hud{bottom:6px} .hudbox{max-width:400px;padding:5px 8px}
   }
   #nogl{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:40px;color:var(--mut);font-size:14px;line-height:1.6}
 </style>
@@ -159,9 +235,9 @@
     <div id="sig"><div class="n">PROF. BIAGIO RAUCCI</div><div class="s">SERIE RAUCCI · COSTRUZIONI AERONAUTICHE</div></div>
     <div id="hud">
       <div class="hudbox">
-        <div class="ro roll"><div class="k">Φ rollio · roll</div><div class="v" id="roPhi">0.0<small>°</small></div></div>
-        <div class="ro pitch"><div class="k">Θ beccheggio · pitch</div><div class="v" id="roTheta">0.0<small>°</small></div></div>
-        <div class="ro yaw"><div class="k">Ψ imbardata · yaw</div><div class="v" id="roPsi">0.0<small>°</small></div></div>
+        <div class="ro roll"><div class="k">Φ rollio<span class="en"> · roll</span></div><div class="v" id="roPhi">0.0<small>°</small></div><div class="sub" id="suA">δa 0/0°</div></div>
+        <div class="ro pitch"><div class="k">Θ beccheggio<span class="en"> · pitch</span></div><div class="v" id="roTheta">0.0<small>°</small></div><div class="sub" id="suE">δe 0°</div></div>
+        <div class="ro yaw"><div class="k">Ψ imbardata<span class="en"> · yaw</span></div><div class="v" id="roPsi">0.0<small>°</small></div><div class="sub" id="suR">δr 0°</div></div>
       </div>
       <div class="hudbox">
         <div class="ro d"><div class="k">δ alett. dx / sx</div><div class="v" id="roA">0 / 0<small>°</small></div></div>
@@ -172,6 +248,7 @@
   </div>
 
   <aside id="panel">
+    <div id="grab" aria-label="Apri o chiudi il pannello"><i></i><span id="grabTxt">Scorri su · teoria e tabella</span></div>
     <div id="ph">
       <div class="eyebrow">Costruzioni Aeronautiche · Classe III</div>
       <h1>ASSI · MOTI · ORGANI DI CONTROLLO</h1>
@@ -204,7 +281,7 @@
   <!-- velivolo in pianta, ala a freccia -->
   <path fill="url(#lgAc)" d="M50 17 C52.2 19 53.2 23 53.2 29 L53.2 43.5 L81 58.5 L81 63 L53.2 56.5 L53.2 70.5 L62.5 77.5 L62.5 81 L51.6 78.6 L50 83 L48.4 78.6 L37.5 81 L37.5 77.5 L46.8 70.5 L46.8 56.5 L19 63 L19 58.5 L46.8 43.5 L46.8 29 C46.8 23 47.8 19 50 17 Z"/>
   <path fill="#1d6fb8" d="M50 17 C51 18.2 51.6 20.4 51.7 23 L48.3 23 C48.4 20.4 49 18.2 50 17 Z" opacity=".9"/>
-</svg></div><div><div class="who">prof. BIAGIO RAUCCI</div><div class="role">Ingegnere aerospaziale · docente di Costruzioni Aeronautiche<br>ITIS «E. Majorana» · Serie Raucci</div></div></div>
+</svg></div><div><div class="who">prof. BIAGIO RAUCCI</div><div class="role">Ingegnere aerospaziale · docente di Costruzioni Aeronautiche<br>ITIS «E. Majorana» · Serie Raucci</div><div class="ttl only-m">Assi · moti · organi di controllo</div></div></div>
     </div>
     <div id="pb">
       <h2>Organi di controllo primari · primary flight controls</h2>
@@ -230,6 +307,7 @@
       <div class="warn"><b>L'incrocio che genera più errori</b>
         Il moto attorno all'asse <em>longitudinale</em> governa la stabilità <em>laterale</em>, e viceversa: i nomi delle stabilità seguono il <em>piano</em> in cui il velivolo si muove, non l'asse di rotazione.</div>
       <div class="info" id="partInfo"></div>
+      <div class="foot-m only-m"><b>© prof. BIAGIO RAUCCI</b><br>Serie Raucci · ITIS «E. Majorana» · Somma Vesuviana (NA)</div>
       <div class="keys">Tastiera: <kbd>←</kbd><kbd>→</kbd> barra laterale · <kbd>↑</kbd><kbd>↓</kbd> barra avanti/indietro · <kbd>Q</kbd><kbd>E</kbd> pedaliera · <kbd>0</kbd> ripristina</div>
     </div>
     <div id="foot"><b>© prof. BIAGIO RAUCCI</b><br>Serie Raucci · ITIS «E. Majorana» · Somma Vesuviana (NA)</div>
@@ -286,20 +364,22 @@ const PARTS = {
    2. Renderer, cielo, luci, post-processing
    ===================================================================== */
 const canvas = document.getElementById('gl');
+const mqCompact = matchMedia('(max-width:900px), (max-height:560px)');
+const LOWPOWER = mqCompact.matches || matchMedia('(pointer:coarse)').matches;
 let renderer;
 try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, powerPreference:'high-performance'}); }
 catch(e){ document.getElementById('nogl').style.display='grid'; throw e; }
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(devicePixelRatio, LOWPOWER ? 1.5 : 2));
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(36, 1, 0.5, 900);
-const HOME = new THREE.Vector3(34, 14, -32);
+const HOME0 = new THREE.Vector3(34, 14, -32), HOME = HOME0.clone(); let fitK = 1;
 camera.position.copy(HOME);
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true; controls.dampingFactor = 0.06; controls.enablePan = false;
-controls.minDistance = 16; controls.maxDistance = 110; controls.target.set(0, 0.5, 0);
+controls.minDistance = 16; controls.maxDistance = 170; controls.target.set(0, 0.5, 0);
 controls.autoRotate = true; controls.autoRotateSpeed = 0.35; let idleT = 0;
 controls.addEventListener('start', () => { controls.autoRotate = false; idleT = 0; });
 
@@ -345,13 +425,13 @@ scene.add(new THREE.Mesh(new THREE.SphereGeometry(600, 48, 24), skyMat));
 scene.add(new THREE.HemisphereLight(0xa8c6ee, 0x1b2230, 0.5));
 const key = new THREE.DirectionalLight(0xfff1e0, 2.6);
 key.position.copy(SUN).multiplyScalar(60); key.castShadow = true;
-key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.03;
+key.shadow.mapSize.set(LOWPOWER?1024:2048, LOWPOWER?1024:2048); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.03;
 Object.assign(key.shadow.camera, {left:-26, right:26, top:26, bottom:-26, near:1, far:160});
 scene.add(key);
 const fill = new THREE.DirectionalLight(0x8fb4ff, 0.45); fill.position.set(-25, 8, 26); scene.add(fill);
 
 // --- particelle in deriva (cristalli di ghiaccio d'alta quota)
-const PN = 700, ppos = new Float32Array(PN*3);
+const PN = LOWPOWER ? 320 : 700, ppos = new Float32Array(PN*3);
 for (let i=0;i<PN;i++){ ppos[3*i]=(Math.random()-.5)*160; ppos[3*i+1]=(Math.random()-.5)*90; ppos[3*i+2]=(Math.random()-.5)*160; }
 const pgeo = new THREE.BufferGeometry(); pgeo.setAttribute('position', new THREE.BufferAttribute(ppos,3));
 const particles = new THREE.Points(pgeo, new THREE.PointsMaterial({color:0xcfe0ff, size:0.28, transparent:true, opacity:0.35, blending:THREE.AdditiveBlending, depthWrite:false}));
@@ -627,7 +707,7 @@ addLabel({part:'wingL', ...PARTS.wingL, pos: wpt(wingSec(0.5,-1), 0.3, 0.35), R:
 addLabel({part:'wingletR', ...PARTS.wingletR, pos: new THREE.Vector3(wingSec(1,1).le.x-1.2, wingSec(1,1).le.y+2.3, 17.2), R:0.8});
 addLabel({part:'fuselage', ...PARTS.fuselage, pos: new THREE.Vector3(-5.5, 1.95, 0), R:1.4});
 addLabel({part:'engineL', ...PARTS.engineL, pos: new THREE.Vector3(1.2,-2.4,-7.65), R:1.2});
-addLabel({it:'G · baricentro', en:'centre of gravity', pos:new THREE.Vector3(0,0,0), cls:'axis'});
+addLabel({it:'G · baricentro', en:'centre of gravity', pos:new THREE.Vector3(0,0,0), cls:'axis g'});
 addLabel({it:'x · asse longitudinale', en:'longitudinal axis', pos:new THREE.Vector3(22.6,0,0), cls:'axis'});
 addLabel({it:'y · asse trasversale', en:'lateral axis', pos:new THREE.Vector3(0,0,-21.6), cls:'axis'});
 addLabel({it:'z · asse verticale', en:'vertical axis', pos:new THREE.Vector3(0,11.6,0), cls:'axis'});
@@ -639,22 +719,31 @@ const symLabels = {
 setTimeout(() => labels.forEach((L,i) => setTimeout(() => L.el.classList.add('in'), 60*i)), 500);
 
 const _v = new THREE.Vector3(), _ray = new THREE.Raycaster();
+const hudEl = document.getElementById('hud'); let hudH = 0;
 let showLabels = true, showAxes = true;
 function updateLabels(dt){
-  const w = canvas.clientWidth, h = canvas.clientHeight; const mobile = w<900;
+  const w = canvas.clientWidth, h = canvas.clientHeight; const mobile = mqCompact.matches;
+  if (frame%30===0 || !hudH) hudH = hudEl.offsetHeight + parseFloat(getComputedStyle(hudEl).bottom||0);
   aircraft.updateMatrixWorld();
   const cen = _v.set(0,0.5,0).applyMatrix4(aircraft.matrixWorld).project(camera); const cx=(cen.x+1)/2*w, cy=(1-cen.y)/2*h;
+  const M0 = mobile ? 6 : 10, TOP0 = mobile ? 44 : 60, BOT0 = hudH + (mobile ? 8 : 16);
+  const cl = (v,a,b) => Math.min(Math.max(v,a), Math.max(a,b));
   const parts = [];
   for (const L of labels){
     const isSym = L.cls.includes('sym'), isAxis = L.cls.includes('axis');
-    const vis = isSym ? L.el.classList.contains('show') : (isAxis ? showAxes : showLabels);
+    let vis = isSym ? L.el.classList.contains('show') : (isAxis ? showAxes : showLabels);
+    // sul telefono: sempre i soli organi primari; le parti secondarie compaiono quando vengono toccate
+    if (vis && mobile && L.part && !PARTS[L.part].organ && L.part !== S.focus) vis = false;
     if (!vis){ L.el.classList.add('hidden'); if (L.line){ L.line.style.display='none'; L.dot.style.display='none'; } continue; }
     _v.copy(L.pos).applyMatrix4(aircraft.matrixWorld); const world = _v.clone(); _v.project(camera);
     if (_v.z>1){ L.el.classList.add('hidden'); if (L.line){ L.line.style.display='none'; L.dot.style.display='none'; } continue; }
     L.el.classList.remove('hidden');
     L.ax = (_v.x+1)/2*w; L.ay = (1-_v.y)/2*h;
     if (isSym){ L.el.style.transform = `translate(${L.ax}px,${L.ay}px) translate(-50%,-50%)`; L.x=L.ax; L.y=L.ay; L.w=L.h=44; L.fixed=true; parts.push(L); continue; }
-    if (isAxis){ L.el.style.transform = `translate(${L.ax}px,${L.ay}px) translate(-50%,-110%)`; continue; }
+    if (isAxis){ if (!L.w || frame%30===0){ L.w = L.el.offsetWidth; L.h = L.el.offsetHeight; }
+      const x = cl(L.ax, M0 + L.w/2, w - M0 - L.w/2), y = cl(L.ay - 0.6*L.h, TOP0 + L.h/2, h - BOT0 - L.h/2);
+      // le etichette degli assi partecipano alla repulsione, ancorate alla punta della freccia
+      L.axisLbl = true; L.tx = x; L.ty = y; if (!L.init){ L.x=x; L.y=y; L.init=true; } parts.push(L); continue; }
     // occlusione
     const dir = world.sub(camera.position); const dist = dir.length(); dir.normalize();
     _ray.set(camera.position, dir); _ray.far = dist - 0.35;
@@ -663,30 +752,35 @@ function updateLabels(dt){
     parts.push(L);
   }
   // posizione desiderata: a raggiera dal centro del velivolo
-  const base = mobile ? 70 : 150;
+  const base = mobile ? Math.max(46, Math.min(w,h)*0.16) : 150;
   for (const L of parts){
-    if (L.fixed) continue;
+    if (L.fixed || L.axisLbl) continue;
     let dx = L.ax-cx, dy = L.ay-cy; const len = Math.hypot(dx,dy) || 1; dx/=len; dy/=len;
     const r = base*L.R + Math.max(0, 0.35*(base - len));
     L.tx = L.ax + dx*r; L.ty = L.ay + dy*r;
-    const m = 10, bot = mobile ? 10 : 100, top = 60;
-    L.tx = Math.min(Math.max(L.tx, m + L.w/2), w - m - L.w/2); L.ty = Math.min(Math.max(L.ty, top + L.h/2), h - bot - L.h/2);
+    L.tx = cl(L.tx, M0 + L.w/2, w - M0 - L.w/2); L.ty = cl(L.ty, TOP0 + L.h/2, h - BOT0 - L.h/2);
     if (!L.init){ L.x=L.tx; L.y=L.ty; L.init=true; }
   }
   // integrazione morbida + repulsione fra riquadri
   const k = 1 - Math.exp(-dt*6);
   for (const L of parts){ if (L.fixed) continue; L.x += (L.tx-L.x)*k; L.y += (L.ty-L.y)*k; }
-  for (let it=0; it<4; it++) for (let i=0;i<parts.length;i++) for (let j=i+1;j<parts.length;j++){
-    const A=parts[i], B=parts[j]; const pad=10;
+  for (let it=0; it<(mobile?8:4); it++) for (let i=0;i<parts.length;i++) for (let j=i+1;j<parts.length;j++){
+    const A=parts[i], B=parts[j]; const pad = mobile ? 6 : 10;
     const ox = (A.w+B.w)/2 + pad - Math.abs(A.x-B.x), oy = (A.h+B.h)/2 + pad - Math.abs(A.y-B.y);
     if (ox>0 && oy>0){
       const fa = A.fixed?0:(B.fixed?1:0.5), fb = 1-fa; if (A.fixed && B.fixed) continue;
-      if (ox < oy){ const s = Math.sign(A.x-B.x)||1; A.x += s*ox*fa; B.x -= s*ox*fb; } else { const s = Math.sign(A.y-B.y)||1; A.y += s*oy*fa; B.y -= s*oy*fb; }
+      // spinta lungo l'asse di minima sovrapposizione, ma se porterebbe un riquadro fuori dallo schermo si spinge sull'altro asse
+      const sx = Math.sign(A.x-B.x)||1, ax2 = A.x + sx*ox*fa, bx2 = B.x - sx*ox*fb;
+      const inX = (P, x) => P.fixed || (x >= M0 + P.w/2 - 0.5 && x <= w - M0 - P.w/2 + 0.5);
+      if (ox < oy && inX(A, ax2) && inX(B, bx2)){ A.x = ax2; B.x = bx2; }
+      else { const sy = Math.sign(A.y-B.y)||1; A.y += sy*oy*fa; B.y -= sy*oy*fb; }
     }
   }
   for (const L of parts){
     if (L.fixed) continue;
+    L.x = cl(L.x, M0 + L.w/2, w - M0 - L.w/2); L.y = cl(L.y, TOP0 + L.h/2, h - BOT0 - L.h/2);
     L.el.style.transform = `translate(${L.x - L.w/2}px,${L.y - L.h/2}px)`;
+    if (L.axisLbl) continue;
     // punto d'uscita della linea sul bordo del riquadro
     const vx = L.ax-L.x, vy = L.ay-L.y; const hw=L.w/2+2, hh=L.h/2+2;
     const t = Math.min(hw/Math.max(Math.abs(vx),1e-3), hh/Math.max(Math.abs(vy),1e-3));
@@ -711,7 +805,7 @@ const cardsEl=$('cards'), tbody=$('tbody'), slider=$('slider'), sent=$('sent'), 
 for (const [id,o] of Object.entries(ORGANS)){
   const ax = AXES[o.axis];
   const c = document.createElement('div'); c.className='card'; c.dataset.organ=id; c.style.setProperty('--acc', o.color);
-  c.innerHTML = `<div class="sym">${o.sym}</div><div><div class="n">${o.it} <i>· ${o.en}</i></div>
+  c.innerHTML = `<div class="sym">${o.sym}</div><div><div class="n">${o.it} <i><span class="dot">· </span>${o.en}</i></div>
     <div class="m">asse <b>${ax.sym}</b> ${ax.it} <em>·</em> moto: <b>${o.motion}</b> (${o.motionEn}) <em>·</em> stabilità <b>${o.stab}</b> (${o.stabEn})</div></div>`;
   c.addEventListener('click', () => selectOrgan(id)); cardsEl.appendChild(c);
   const tr = document.createElement('tr'); tr.dataset.organ=id; tr.style.setProperty('--acc', o.color);
@@ -724,7 +818,8 @@ function selectOrgan(id, keep=false){
   if (!keep) for (const k of Object.keys(S.cmd)) if (k!==o.key) S.cmd[k]=0;
   document.documentElement.style.setProperty('--acc', o.color);
   for (const el of document.querySelectorAll('.card,tr[data-organ]')) el.classList.toggle('on', el.dataset.organ===id);
-  $('labNeg').textContent = o.neg; $('labPos').textContent = o.pos; slider.value = Math.round(S.cmd[o.key]*100);
+  const bil = t => t.replace(/ · (.*?)( ▶)?$/, (m0, en, arr) => `<span class="en"> · ${en}</span>${arr||''}`);
+  $('labNeg').innerHTML = bil(o.neg); $('labPos').innerHTML = bil(o.pos); slider.value = Math.round(S.cmd[o.key]*100);
   if (G.on) $('btnDemo').disabled = true;
   for (const [k,a] of Object.entries(arcs)) a.visible = showAxes && k===o.key;
   for (const [k,l] of Object.entries(symLabels)) l.el.classList.toggle('show', k===o.key);
@@ -736,7 +831,9 @@ function selectOrgan(id, keep=false){
 }
 function onPartClick(pid){
   const p = PARTS[pid];
+  S.focus = p.organ ? null : pid;
   if (p.organ) selectOrgan(p.organ); else partInfo.innerHTML = `<b>${p.it} · ${p.en}</b> — ${p.desc}`;
+  if (mqCompact.matches && !p.organ) toast(`${p.it} · ${p.en}`);
   $('hint').classList.add('gone');
 }
 function updateSentence(){
@@ -835,6 +932,19 @@ function gestureTick(dt){
   if (act) gestst.textContent = `Φ ${fmt(GAIN.roll[0]*S.cmd.roll,0)}° · Θ ${fmt(GAIN.pitch[0]*S.cmd.pitch,0)}° · Ψ ${fmt(GAIN.yaw[0]*S.cmd.yaw,0)}° — apertura mano ${Math.round(G.open*100)}%`;
 }
 
+/* ---------- pannello a scomparsa (telefono in verticale) ---------- */
+const appEl = $('app'), grab = $('grab');
+function setSheet(open){ appEl.classList.toggle('sheet-open', open); $('grabTxt').textContent = open ? 'Scorri giù · torna al modello' : 'Scorri su · teoria e tabella'; if (!open) $('pb').scrollTop = 0; }
+grab.addEventListener('click', () => setSheet(!appEl.classList.contains('sheet-open')));
+{ let y0=null; grab.addEventListener('touchstart', e => { y0 = e.touches[0].clientY; }, {passive:true});
+  grab.addEventListener('touchend', e => { if (y0===null) return; const dy = e.changedTouches[0].clientY - y0; y0=null; if (dy < -25) setSheet(true); else if (dy > 25) setSheet(false); }); }
+// scorrimento verso l'alto oltre il fondo del pannello chiuso: lo apre
+$('pb').addEventListener('scroll', () => { if (mqCompact.matches && !appEl.classList.contains('sheet-open') && $('pb').scrollTop > 40) setSheet(true); }, {passive:true});
+/* ---------- toast per le parti secondarie toccate ---------- */
+const toastEl = document.createElement('div'); toastEl.id='toast'; $('stage').appendChild(toastEl); let toastT;
+function toast(t){ toastEl.textContent = t; toastEl.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), 2200); }
+if (matchMedia('(pointer:coarse)').matches) $('hint').textContent = 'Trascina per ruotare · pizzica per lo zoom · tocca un organo sul modello';
+
 /* ---------- picking ---------- */
 const pointer = new THREE.Vector2(); let downAt=null;
 function pick(ev){
@@ -859,9 +969,15 @@ canvas.addEventListener('pointerup', ev => { if (!downAt) return; const d = Math
    ===================================================================== */
 function resize(){
   const w = canvas.clientWidth, h = canvas.clientHeight, pr = renderer.getPixelRatio();
-  if (canvas.width!==Math.floor(w*pr) || canvas.height!==Math.floor(h*pr)){ renderer.setSize(w,h,false); composer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix(); svg.setAttribute('viewBox',`0 0 ${w} ${h}`); }
+  if (canvas.width!==Math.floor(w*pr) || canvas.height!==Math.floor(h*pr)){
+    renderer.setSize(w,h,false); composer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix(); svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+    // in verticale il velivolo (apertura 34 m) non sta nel campo orizzontale: allontana la camera in proporzione
+    const k = THREE.MathUtils.clamp(1.2/camera.aspect, 1, 2.0);
+    if (Math.abs(k-fitK) > 0.01){ const off = camera.position.clone().sub(controls.target); camera.position.copy(controls.target).add(off.multiplyScalar(k/fitK)); fitK = k; HOME.copy(HOME0).multiplyScalar(k); }
+  }
 }
 const clock = new THREE.Clock(); let tPulse=0, frame=0;
+const suA=$('suA'), suE=$('suE'), suR=$('suR');
 const fmt = (x,d=1) => (x>=0?'+':'−') + Math.abs(x).toFixed(d);
 function animate(){
   requestAnimationFrame(animate);
@@ -891,6 +1007,7 @@ function animate(){
   // auto-rotazione quando inattivo
   idleT += dt; if (!controls.autoRotate && idleT>25 && !viewAnim) controls.autoRotate = true;
   $('roPhi').innerHTML = fmt(S.att.roll.x)+'<small>°</small>'; $('roTheta').innerHTML = fmt(S.att.pitch.x)+'<small>°</small>'; $('roPsi').innerHTML = fmt(S.att.yaw.x)+'<small>°</small>';
+  if (frame%3===0){ suA.textContent = `δa ${fmt(S.del.aR.x,0)}/${fmt(S.del.aL.x,0)}°`; suE.textContent = `δe ${fmt(S.del.e.x,0)}°`; suR.textContent = `δr ${fmt(S.del.r.x,0)}°`; }
   $('roA').innerHTML = `${fmt(S.del.aR.x,0)} / ${fmt(S.del.aL.x,0)}<small>°</small>`; $('roE').innerHTML = fmt(S.del.e.x,0)+'<small>°</small>'; $('roR').innerHTML = fmt(S.del.r.x,0)+'<small>°</small>';
   if (viewAnim){ viewAnim.t += dt/1.1; const u = viewAnim.t>=1?1:1-Math.pow(1-viewAnim.t,3); camera.position.lerpVectors(viewAnim.from, viewAnim.to, u); if (viewAnim.t>=1) viewAnim=null; }
   controls.update();
@@ -898,7 +1015,6 @@ function animate(){
   updateLabels(dt);
 }
 selectOrgan('ailerons');
-window.__dbg = {camera, controls, G, S, onHands, setCtlMode};
 setTimeout(() => $('hint').classList.add('gone'), 9000);
 animate();
 </script>
